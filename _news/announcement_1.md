@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2022-02-16
 inline: true
 ---
 
-A simple inline announcement.
+I am selected as a recipient of the silver prize in the 28th HumanTech Paper Award.
