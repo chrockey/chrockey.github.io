@@ -86,9 +86,9 @@
           </div>
           
           <!-- Additional info -->
-          {%- if entry.additional_info -%}
-            {%<span style="color:red">entry.additional_info</span>%}
-          {%- endif -%}
+          {% if entry.additional_info -%}
+            {{%<p style="color:red">entry.additional_info</p>%}}
+          {%- endif %}
 
         {%- endif %}
         
