@@ -3,11 +3,9 @@
 <!-- _layouts/bib.html -->
       <div class="row">
         <div class="col-sm-4">
-            {% if entry.img_path -%}
+            {%- if entry.img_path -%}
               {% include figure.html path=entry.img_path class="img-fluid rounded z-depth-1" zoomable=true %}
-            {$- else %}
-              {% include figure.html path="assets/img/1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
-            {%- endif %}
+            {%- endif -%}
         </div>
 
         <!-- Entry bib key -->
