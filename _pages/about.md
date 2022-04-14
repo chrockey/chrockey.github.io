@@ -6,7 +6,7 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: chunghyun.jpg
+  image: chunghyun.png
   address: >
     <p>Room #302, Engineering Building #2</p>
     <p>Chungam-Ro 77, POSTECH</p>
