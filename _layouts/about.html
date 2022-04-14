@@ -46,8 +46,12 @@ layout: default
             {%- include selected_papers.html %}
           {%- endif %}
           {% if page.services -%}
-            <!-- Professional services -->
-            {%- include services.html %}
+          <!-- Professional services -->
+          {%- include services.html %}
+          {%- endif %}
+          {% if page.honors -%}
+          <!-- Honors and awards -->
+          {%- include honors.html %}
           {%- endif %}
           {%- if page.social %}
           <!-- Social -->
