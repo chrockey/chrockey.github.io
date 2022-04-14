@@ -31,6 +31,19 @@ layout: default
 
           <div class="clearfix">
             {{ content }}
+            {%- if page.social %}
+            <!-- Social -->
+            <div class="social">
+              <div class="contact-icons">
+              {% include social.html %}
+              </div>
+
+              <div class="contact-note">
+                {{ site.contact_note }}
+              </div>
+              
+            </div>
+            {%- endif %}
           </div>
 
           {% if page.news -%}
@@ -52,19 +65,6 @@ layout: default
           {% if page.honors -%}
           <!-- Honors and awards -->
           {%- include honors.html %}
-          {%- endif %}
-          {%- if page.social %}
-          <!-- Social -->
-          <div class="social">
-            <div class="contact-icons">
-            {% include social.html %}
-            </div>
-
-            <div class="contact-note">
-              {{ site.contact_note }}
-            </div>
-            
-          </div>
           {%- endif %}
         </article>
 
