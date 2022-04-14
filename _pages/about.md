@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: PhD student in the <a href='http://cvlab.postech.ac.kr/lab/'>Computer Vision Lab</a> at <a href='https://postech.ac.kr/eng/'>POSTECH</a>.
 
