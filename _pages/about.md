@@ -10,7 +10,7 @@ profile:
   address: >
     <p>Room #302, Eng. Bldg. #2</p>
     <p>Chungam-Ro 77, POSTECH</p>
-    <p>Pohang, Gyeongbuk, South Korea 37673</p>
+    <p>Pohang, Gyeongbuk, South Korea (Zip code: 37673)</p>
 
 news: true  # includes a list of news items
 education: true # includes a list of education items
