@@ -8,7 +8,7 @@ profile:
   align: right
   image: chunghyun.png
   address: >
-    <p>Room #302, Eng. Bldg. #2</p>
+    <p>Room #302, Eng. Building #2</p>
     <p>Chungam-Ro 77, POSTECH</p>
     <p>Pohang, Gyeongbuk, South Korea (Zip code: 37673)</p>
 
