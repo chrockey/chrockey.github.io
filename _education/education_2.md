@@ -1,6 +1,6 @@
 ---
 layout: post
-start_and: Mar, 2020 - Feb, 2022
+start_end: "Mar, 2020 - Feb, 2022"
 inline: true
 ---
 
