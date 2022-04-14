@@ -1,9 +1,8 @@
 ---
 layout: post
-start_date: 2014-03
-end_date: 2019-02
+start_and: "Mar, 2014 - Feb, 2019"
 inline: true
 ---
 
-[POSTECH](https://postech.ac.kr/eng/) \
+[Pohang University of Science and Technology](https://postech.ac.kr/eng/), Pohang, Korea \
 B.S. in Mechanical Engineering
