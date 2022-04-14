@@ -1,7 +1,7 @@
 ---
 layout: post
-category: "Reviewer"
 inline: true
 ---
 
-CVPR (2022), ECCV (2022)
+**Reviewer**
+- CVPR (2022), ECCV (2022)
