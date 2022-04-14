@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD student in the [Computer Vision Lab](http://cvlab.postech.ac.kr/lab/) at [POSTECH](https://postech.ac.kr/eng/).
+subtitle: PhD student in the <a href='http://cvlab.postech.ac.kr/lab/'>Computer Vision Lab</a> at <a href='https://postech.ac.kr/eng/'>POSTECH</a>.
 
 profile:
   align: right
