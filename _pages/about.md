@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: PhD student in the [Computer Vision Lab](http://cvlab.postech.ac.kr/lab/) at [POSTECH](https://postech.ac.kr/eng/).
 
 profile:
   align: right
