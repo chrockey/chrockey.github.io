@@ -27,4 +27,4 @@ Previously, I completed my B.S in Mechanical Engineering and M.S in Artificial I
 
 My research topics of interest include computer vision, 3D vision, and 3D reconstruction.
 I am particularly interested in 3D perception on point clouds for applications in autonomous vehicles and robotics.
-If you are interested in my research projects, please feel free to contact me in one of the following ways.
+If you are interested in my research, please feel free to contact me by clicking the icons below.
