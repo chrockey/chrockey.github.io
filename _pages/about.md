@@ -27,4 +27,4 @@ Previously, I completed my B.S in Mechanical Engineering and M.S in Artificial I
 
 My research lies in machine learning and computer vision including but not limited to 3D scene understanding and reconstruction.
 I am particularly interested in 3D perception on point clouds for applications in autonomous vehicles and robotics.
-If you are interested in my research projects, please feel free to contact me by clicking the icons below.
+If you are interested in my research projects, please feel free to contact me by clicking one of the icons below.
