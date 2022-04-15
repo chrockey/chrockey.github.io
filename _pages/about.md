@@ -8,7 +8,7 @@ profile:
   align: right
   image: chunghyun.png
   address: >
-    <p>Room #302, Bldg. #2</p>
+    <p>Room#302, B#2,</p>
     <p>Chungam-Ro 77,</p>
     <p>Pohang, Gyeongbuk,</p>
     <p>South Korea 37673</p>
