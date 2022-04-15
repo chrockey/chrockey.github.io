@@ -25,6 +25,6 @@ I am currently pursuing a Ph.D. in [Graduate School of Artificial Intelligence](
 I am a member of the [Computer Vision Lab](http://cvlab.postech.ac.kr/lab/) at POSTECH, advised by Prof. [Jaesik Park](https://jaesik.info/).
 Previously, I completed my B.S in Mechanical Engineering and M.S in Artificial Intelligence at POSTECH.
 
-My research topics of interest include computer vision, 3D vision, and 3D reconstruction.
+My research lies in machine learning and computer vision including but not limited to 3D scene understanding and reconstruction.
 I am particularly interested in 3D perception on point clouds for applications in autonomous vehicles and robotics.
-If you are interested in my research, please feel free to contact me by clicking the icons below.
+If you are interested in my research projects, please feel free to contact me by clicking the icons below.
