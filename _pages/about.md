@@ -23,7 +23,7 @@ social: true  # includes social icons at the bottom of the page
 
 I am currently pursuing a Ph.D. in [Graduate School of Artificial Intelligence](http://ai.postech.ac.kr/) at [POSTECH](https://postech.ac.kr/eng/).
 I am a member of the [Computer Vision Lab](http://cvlab.postech.ac.kr/lab/) at POSTECH, advised by Prof. [Jaesik Park](https://jaesik.info/).
-Previously, I completed my B.S in Mechanical Engineering and M.S in Artificial Intelligence at POSTECH.
+Previously, I completed my B.S. in Mechanical Engineering and M.S. in Artificial Intelligence at POSTECH.
 
 My research lies in machine learning and computer vision including, but not limited to, 3D scene understanding and reconstruction.
 I am particularly interested in 3D perception on point clouds for applications in autonomous vehicles and robotics.
