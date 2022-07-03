@@ -2,6 +2,21 @@
 ---
 
 @string{cvpr = {{IEEE/CVF} Conference on Computer Vision and Pattern Recognition (CVPR),}}
+@string{eccv = {European Conference on Computer Vision (ECCV),}}
+
+@article{choe2021pointmixer,
+  abbr={ECCV},
+  title={PointMixer: MLP-Mixer for Point Cloud Understanding},
+  author={Jaesung Choe* and Chunghyun Park* and Francois Rameau and Jaesik Park and In So Kweon},
+  abstract={MLP-Mixer has newly appeared as a new challenger against the realm of CNNs and Transformer. Despite its simplicity compared to Transformer, the concept of channel-mixing MLPs and token-mixing MLPs achieves noticeable performance in image recognition tasks. Unlike images, point clouds are inherently sparse, unordered and irregular, which limits the direct use of MLP-Mixer for point cloud understanding. To overcome these limitations, we propose PointMixer, a universal point set operator that facilitates information sharing among unstructured 3D point cloud. By simply replacing token-mixing MLPs with Softmax function, PointMixer can ``mix" features within/between point sets. By doing so, PointMixer can be broadly used for intra-set, inter-set, and hierarchical-set mixing. We demonstrate that various channel-wise feature aggregation in numerous point sets is better than self-attention layers or dense token-wise interaction in a view of parameter efficiency and accuracy. Extensive experiments show the competitive or superior performance of PointMixer in semantic segmentation, classification, and reconstruction against Transformer-based methods.},
+  booktitle=eccv,
+  year={2022},
+  arxiv={2111.11187},
+  selected={true},
+  code={https://github.com/LifeBeyondExpectations/PointMixer},
+  img_path={assets/img/choe2021pointmixer.png},
+  equal_contrib={true}
+}
 
 @inproceedings{park2022fast,
  title={{Fast Point Transformer}},
@@ -16,20 +31,6 @@
  website={http://cvlab.postech.ac.kr/research/FPT/},
  img_path={assets/img/park2022fast.png},
  additional_info={Silver Prize at the 28th HumanTech Paper Award}
-}
-
-@article{choe2021pointmixer,
-  abbr={PREPRINT},
-  title={PointMixer: MLP-Mixer for Point Cloud Understanding},
-  author={Jaesung Choe* and Chunghyun Park* and Francois Rameau and Jaesik Park and In So Kweon},
-  abstract={MLP-Mixer has newly appeared as a new challenger against the realm of CNNs and Transformer. Despite its simplicity compared to Transformer, the concept of channel-mixing MLPs and token-mixing MLPs achieves noticeable performance in image recognition tasks. Unlike images, point clouds are inherently sparse, unordered and irregular, which limits the direct use of MLP-Mixer for point cloud understanding. To overcome these limitations, we propose PointMixer, a universal point set operator that facilitates information sharing among unstructured 3D point cloud. By simply replacing token-mixing MLPs with Softmax function, PointMixer can “mix” features within/between point sets. By doing so, PointMixer can be broadly used for intra-set, inter-set, and hierarchical-set mixing. We demonstrate that various channel-wise feature aggregation in numerous point sets is better than self-attention layers or dense token-wise interaction in a view of parameter efficiency and accuracy. Extensive experiments show the competitive or superior performance of PointMixer in semantic segmentation, classification, and reconstruction against Transformer-based methods.},
-  journal={arXiv preprint arXiv:2111.11187,},
-  year={2021},
-  arxiv={2111.11187},
-  selected={true},
-  code={https://github.com/LifeBeyondExpectations/PointMixer},
-  img_path={assets/img/choe2021pointmixer.png},
-  equal_contrib={true}
 }
 
 @article{DEN.47.777,
