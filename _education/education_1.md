@@ -5,5 +5,4 @@ inline: true
 ---
 
 [Pohang University of Science and Technology (POSTECH)](https://postech.ac.kr/eng/), Pohang, South Korea \
-B.S. in Mechanical Engineering \
-Advisor: Prof. [Dong Sung Kim](https://scholar.google.com/citations?user=s9-5LXcAAAAJ&hl=eng)
+B.S. in Mechanical Engineering
