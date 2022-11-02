@@ -9,4 +9,4 @@ inline: true
 **Reviewer**
 - International Conference on 3D Vision (3DV), 2022
 - European Conference on Computer Vision (ECCV), 2022
-- IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022
+- IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022-2023
