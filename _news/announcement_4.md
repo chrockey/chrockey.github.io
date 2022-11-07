@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2022-10-19
+date: 2022-10-04
 inline: true
 ---
 
-:mega: [Open3D 0.16](http://www.open3d.org/2022/10/19/open3d-0-16-is-out/) is released with my contribution to NearestNeighborSearch module.
+:trophy: Two papers got included in the 42 finalists at [the Qualcomm Innovation Fellowship 2022](https://www.qualcomm.com/research/university-relations/innovation-fellowship/2022-south-korea).

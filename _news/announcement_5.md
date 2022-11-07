@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2022-10-22
+date: 2022-10-19
 inline: true
 ---
 
-:pencil: One workshop paper about equivariant learning is accepted to [NeurIPS 2022 Workshop - NeurReps](https://www.neurreps.org/).
+:mega: [Open3D 0.16](http://www.open3d.org/2022/10/19/open3d-0-16-is-out/) is released with my contribution to NearestNeighborSearch module.
