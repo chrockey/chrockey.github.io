@@ -9,7 +9,7 @@ profile:
   image: chunghyun.png
   address: >
     <p><a href='assets/pdf/cv_chunghyun_park.pdf'>Curriculum Vitae</a></p>
-    <p></p>
+    <p> </p>
 
 news: true  # includes a list of news items
 education: true # includes a list of education items
