@@ -7,7 +7,7 @@ subtitle: Ph.D. student in the <a href='http://cvlab.postech.ac.kr/lab/'>Compute
 profile:
   align: right
   image: chunghyun.png
-  address: <a href='assets/pdf/cv_chunghyun_park.pdf'>Résumé</a>
+  address: <a href='assets/pdf/cv_chunghyun_park.pdf'>Curriculum Vitae</a>
 
 news: true  # includes a list of news items
 education: true # includes a list of education items
@@ -22,7 +22,5 @@ Previously, I completed my M.S. in Artificial Intelligence and B.S. in Mechanica
 
 My research lies in machine learning and computer vision including, but not limited to, 3D scene understanding and reconstruction.
 I am particularly interested in 3D perception on point clouds for applications in autonomous vehicles and robotics.
-
-Résumé: [cv_chunghyun_park.pdf](assets/pdf/cv_chunghyun_park.pdf)
 
 If you are interested in my research projects, please feel free to contact me.
