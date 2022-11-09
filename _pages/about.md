@@ -24,4 +24,4 @@ I am particularly interested in 3D perception on point clouds for applications i
 
 Résumé: [cv_chunghyun_park.pdf](assets/pdf/cv_chunghyun_park.pdf)
 
-If you are interested in my research projects, please feel free to contact me by clicking one of the icons below:
+If you are interested in my research projects, please feel free to contact me.
