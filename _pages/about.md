@@ -7,9 +7,7 @@ subtitle: Ph.D. student in the <a href='http://cvlab.postech.ac.kr/lab/'>Compute
 profile:
   align: right
   image: chunghyun.png
-  address: >
-    <p><a href='assets/pdf/cv_chunghyun_park.pdf'>Curriculum Vitae</a></p>
-    <p> </p>
+  address: <a href='assets/pdf/cv_chunghyun_park.pdf'>Curriculum Vitae</a>
 
 news: true  # includes a list of news items
 education: true # includes a list of education items
