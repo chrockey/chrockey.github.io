@@ -3,7 +3,7 @@ layout: post
 inline: true
 ---
 
-**BK21 Best Paper Award, POSTECH GSAI (2022)**
+**BK21 Best Paper Award, POSTECH GSAI (2023)**
 - Grand Prize
 
 **Qualcomm Innovation Fellowship South Korea (2022)**
