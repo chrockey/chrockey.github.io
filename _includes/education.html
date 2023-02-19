@@ -10,7 +10,7 @@
                   <th scope="row">{{ item.start_end }}</th>
                   <td>
                     {% if item.inline -%} 
-                      {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                      {{ item.content }}
                     {%- else -%} 
                       <a class="education-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
                     {%- endif %} 
