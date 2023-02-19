@@ -3,12 +3,8 @@ layout: post
 inline: true
 ---
 
-**BK21 Best Paper Award, POSTECH GSAI, 2023**
-- Grand Prize
-
-**Qualcomm Innovation Fellowship South Korea, 2022**
+**BK21 Best Paper Award (Grand Prize)**, POSTECH GSAI, 2023
+**Qualcomm Innovation Fellowship Korea**, 2022
 - Winner: Fast Point Transformer (CVPR 2022)
 - Finalist: PointMixer (ECCV 2022)
-
-**The 28th HumanTech Paper Award, Samsung Electronics Co., Ltd., 2022**
-- Silver Prize in Signal Processing
+**The 28th HumanTech Paper Award (Silver Prize)**, Samsung Electronics Co., Ltd., 2022
