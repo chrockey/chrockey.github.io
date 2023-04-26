@@ -10,11 +10,23 @@
   - firstname: ["Yoonwoo"]
     url: https://github.com/jeongyw12382
 
+"Jeong*":
+  - firstname: ["Yoonwoo"]
+    url: https://github.com/jeongyw12382
+
 "Kim":
   - firstname: ["Seungwook"]
     url: https://wookiekim.github.io/
 
+"Kim*":
+  - firstname: ["Seungwook"]
+    url: https://wookiekim.github.io/
+
 "Choe":
+  - firstname: ["Jaesung"]
+    url: https://sites.google.com/view/jaesungchoe
+
+"Choe*":
   - firstname: ["Jaesung"]
     url: https://sites.google.com/view/jaesungchoe
 
