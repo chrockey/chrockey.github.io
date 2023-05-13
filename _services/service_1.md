@@ -8,6 +8,7 @@ inline: true
 
 **Reviewer**
 - International Journal of Computer Vision (**IJCV**), 2023
+- Conference on Neural Information Processing Systems (**NeurIPS**), 2023
 - IEEE/CVF International Conference on Computer Vision (**ICCV**), 2023
 - IEEE/CVF Conference on Computer Vision and Pattern Recognition (**CVPR**), 2022-2023
 - European Conference on Computer Vision (**ECCV**), 2022
