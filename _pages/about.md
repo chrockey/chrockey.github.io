@@ -9,7 +9,7 @@ profile:
   image: chunghyun.png
 
 news: true  # includes a list of news items
-education: true # includes a list of education items
+education: false # includes a list of education items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 services: true # includes a list of professional services.
 honors: true # includes a list of honors and awards.
