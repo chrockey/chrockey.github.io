@@ -4,7 +4,7 @@ inline: true
 ---
 
 **Collaborator**
-- [Open3D](https://github.com/isl-org/Open3D) with Intel Corp., USA (2021 - Present)
+- [Open3D](https://github.com/isl-org/Open3D) with Intel Corp., USA (2021 - 2022)
 
 **Reviewer**
 - International Journal of Computer Vision (**IJCV**), 2023
