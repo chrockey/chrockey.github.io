@@ -3,13 +3,5 @@ layout: post
 inline: true
 ---
 
-**Journal Reviewer**
-- IEEE Transactions on Pattern Analysis and Machine Intelligence (**TPAMI**)
-- International Journal of Computer Vision (**IJCV**)
-
-**Conference Reviewer**
-- International Conference on Learning Representations (**ICLR**), 2024
-- Conference on Neural Information Processing Systems (**NeurIPS**), 2023
-- IEEE/CVF International Conference on Computer Vision (**ICCV**), 2023
-- IEEE/CVF Conference on Computer Vision and Pattern Recognition (**CVPR**), 2022-2023
-- European Conference on Computer Vision (**ECCV**), 2022
+**Journal Reviewer**: TPAMI (2023), IJCV (2023)
+**Conference Reviewer**: ICLR (2024), NeurIPS (2023), ICCV (2023), CVPR (2022-2023), ECCV (2022)
