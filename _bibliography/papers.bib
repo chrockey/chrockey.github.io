@@ -5,6 +5,18 @@
 @string{eccv = {European Conference on Computer Vision (<b>ECCV</b>),}}
 @string{icml = {International Conference on Machine Learning (<b>ICML</b>),}}
 
+@inproceedings{lee2025mosaic3d,
+  title={Mosaic3D: Foundation Dataset and Model for Open-Vocabulary 3D Segmentation},
+  author={Junha Lee* and Chunghyun Park* and Jaesung Choe and Yu-Chiang Frank Wang and Jan Kautz and Minsu Cho and Chris Choy},
+  abstract={We tackle open-vocabulary 3D scene understanding by introducing a novel data generation pipeline and training framework. Our method addresses three critical requirements for effective training: precise 3D region segmentation, comprehensive textual descriptions, and sufficient dataset scale. By leveraging state-of-the-art open-vocabulary image segmentation models and region-aware Vision-Language Models, we develop an automatic pipeline that generates high-quality 3D mask-text pairs. Applying this pipeline to multiple 3D scene datasets, we create Mosaic3D-5.6M, a dataset of over 30K annotated scenes with 5.6M mask-text pairs, significantly larger than existing datasets. Building upon this data, we propose Mosaic3D, a foundation model combining a 3D encoder trained with contrastive learning and a lightweight mask decoder for open-vocabulary 3D semantic and instance segmentation. Our approach achieves state-of-the-art results on open-vocabulary 3D semantic and instance segmentation tasks including ScanNet200, Matterport3D, and ScanNet++, with ablation studies validating the effectiveness of our large-scale training data.},
+  booktitle=cvpr,
+  year={2025},
+  abbr={CVPR},
+  arxiv={2502.02548},
+  selected={true},
+  img_path={assets/img/lee2025mosaic3d.png},
+}
+
 @inproceedings{park2024learning,
   title={Learning SO(3)-Invariant Semantic Correspondence via Local Shape Transform},
   author={Chunghyun Park* and Seungwook Kim* and Jaesik Park and Minsu Cho},
