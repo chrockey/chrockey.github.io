@@ -42,6 +42,18 @@
   - firstname: ["Francois"]
     url: https://rameau-fr.github.io/
 
+"Wang":
+  - firstname: ["Yu-Chiang", "Frank"]
+    url: https://vllab.ee.ntu.edu.tw/ycwang.html
+
+"Kautz":
+  - firstname: ["Jan"]
+    url: https://jankautz.com/
+
+"Choy":
+  - firstname: ["Christopher", "Chris"]
+    url: https://chrischoy.github.io/
+
 "Kweon":
   - firstname: ["In So"]
     url: https://scholar.google.com/citations?user=XA8EOlEAAAAJ&hl=ko
