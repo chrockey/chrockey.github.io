@@ -80,7 +80,7 @@ const D=[
 {n:"Dex-Net 2.0",s:"",y:2017,v:"RSS",u:"https://berkeleyautomation.github.io/dex-net/",i:"Depth",tags:["single","gripper","sim"],ld:"",sc:"1,500+ obj, 6.7M pairs"},
 {n:"MetaGraspNet",s:"",y:2022,v:"CASE",u:"https://arxiv.org/abs/2112.14663",i:"RGB-D",tags:["single","gripper","sim"],ld:"",sc:"217K scenes, 82 obj"},
 {n:"DexGraspNet",s:"",y:2023,v:"ICRA",u:"https://pku-epic.github.io/DexGraspNet/",i:"3D mesh",tags:["full","dex","sim"],ld:"",sc:"5,355 obj, 1.32M grasps"},
-{n:"DexGraspNet 2.0",s:"",y:2024,v:"CoRL",u:"https://pku-epic.github.io/DexGraspNet/",i:"3D scene",tags:["full","dex","sim"],ld:"",sc:"8,270 scenes, 427M grasps"},
+{n:"DexGraspNet 2.0",s:"",y:2024,v:"CoRL",u:"https://arxiv.org/abs/2410.23004",i:"3D scene",tags:["full","dex","sim"],ld:"",sc:"8,270 scenes, 427M grasps"},
 {n:"ContactDB",s:"",y:2019,v:"CVPR",u:"https://contactdb.cc.gatech.edu/",i:"3D mesh + thermal",tags:["full","human","real"],ld:"2 intents: use, handoff",sc:"50 obj, 3,750 grasps"},
 {n:"HOI4D",s:"",y:2022,v:"CVPR",u:"https://hoi4d.github.io/",i:"RGB-D (ego)",tags:["single","human","real"],ld:"54 interaction tasks",sc:"2.4M frames, 800 obj"},
 {n:"OakInk",s:"",y:2022,v:"CVPR",u:"https://github.com/oakink/OakInk",i:"RGB + 3D mesh",tags:["multi","human","real"],ld:"4 intents",sc:"1,800 obj, 50K poses"},
