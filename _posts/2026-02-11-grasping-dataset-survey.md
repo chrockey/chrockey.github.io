@@ -69,7 +69,6 @@ const D=[
 {n:"LA-TaskGrasp",s:"GraspGPT",y:2023,v:"RA-L",u:"https://github.com/mkt1412/GraspGPT_public",i:"Point cloud",tags:["single","lang","gripper","real"],ld:"LLM descriptions (8.2K)",sc:"191 obj + language"},
 {n:"LaViA-TaskGrasp",s:"FoundationGrasp",y:2025,v:"T-ASE",u:"https://arxiv.org/abs/2404.10399",i:"RGB + Point cloud",tags:["single","lang","gripper","real"],ld:"2M+ instruction templates",sc:"191 obj + 2M instr."},
 {n:"6DTG",s:"",y:2025,v:"arXiv",u:"https://arxiv.org/abs/2502.16976",i:"Point cloud",tags:["full","lang","gripper","sim"],ld:"6 task class labels",sc:"4,391 scenes, 2M+ grasps"},
-{n:"MV-TOD",s:"",y:2025,v:"Under review",u:"",i:"RGB-D",tags:["multi","lang","gripper","sim"],ld:"Open-vocab (GPT-4V, 671K)",sc:"15K scenes, 3,300+ obj"},
 {n:"SemGrasp / CapGrasp",s:"",y:2024,v:"ECCV",u:"https://arxiv.org/abs/2404.03590",i:"3D mesh",tags:["full","lang","dex","sim"],ld:"260K captions (3 levels)",sc:"50K grasps"},
 {n:"DexGYSNet",s:"Grasp as You Say",y:2024,v:"NeurIPS",u:"https://arxiv.org/abs/2405.19291",i:"3D mesh",tags:["full","lang","dex","sim"],ld:"50K grasp-language pairs",sc:"1,800 obj, 50K pairs"},
 {n:"DexTOG-80K",s:"",y:2025,v:"arXiv",u:"https://arxiv.org/abs/2504.04573",i:"3D mesh",tags:["full","lang","dex","sim"],ld:"5 task desc. per obj",sc:"80K grasps, 80 obj"},
