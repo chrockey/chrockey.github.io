@@ -93,11 +93,12 @@ let F=new Set(),sK="y",sD=-1;
 function t(c,x){return'<span class="tg t-'+c+'">'+x+"</span>"}
 function mf(e){if(F.size===0)return true;for(let tag of F){if(!e.tags.includes(tag))return false;}return true;}
 function rr(e){
-const tagHtml=e.tags.map(tag=>t(TCLS[tag],TAGS[tag])).join(" ");
+const inputTags=e.tags.filter(tag=>["single","multi","full","lang","real","sim"].includes(tag)).map(tag=>t(TCLS[tag],TAGS[tag])).join(" ");
+const eeTags=e.tags.filter(tag=>["gripper","dex"].includes(tag)).map(tag=>t(TCLS[tag],TAGS[tag])).join(" ");
 const nh=e.u?'<span class="dn"><a href="'+e.u+'" target="_blank">'+e.n+"</a></span>":'<span class="dn">'+e.n+"</span>";
 const sh=e.s?'<br><span class="vn">'+e.s+"</span>":"";
 const ldText=e.ld?'<div style="font-size:.71rem;color:var(--m);margin-top:2px">'+e.ld+"</div>":"";
-return"<tr><td>"+nh+sh+"</td><td>"+e.y+'</td><td><span class="vn">'+e.v+'</span></td><td><div class="tc">'+tagHtml+'</div><div style="font-size:.73rem;color:var(--m);margin-top:3px">'+e.i+"</div>"+ldText+"</td><td style='font-size:.78rem'>"+e.sc+"</td></tr>"}
+return"<tr><td>"+nh+sh+"</td><td>"+e.y+'</td><td><span class="vn">'+e.v+'</span></td><td><div class="tc">'+inputTags+'</div><div style="font-size:.73rem;color:var(--m);margin-top:3px">'+e.i+"</div>"+ldText+'</td><td><div class="tc">'+eeTags+"</div></td><td style='font-size:.78rem'>"+e.sc+"</td></tr>"}
 function render(){
 const fd=D.filter(mf);
 fd.sort((a,b)=>{let va=a[sK],vb=b[sK];if(typeof va==="string"){va=va.toLowerCase();vb=vb.toLowerCase()}return va<vb?-1*sD:va>vb?1*sD:0});
@@ -122,7 +123,7 @@ R.innerHTML=`
 <button class="fb" data-t="sim">Synthetic</button>
 </div>
 <div class="tw"><table><thead><tr>
-<th data-s="n">Dataset</th><th data-s="y">Year ▼</th><th>Venue</th><th>Input</th><th>Scale</th>
+<th data-s="n">Dataset</th><th data-s="y">Year ▼</th><th>Venue</th><th>Input</th><th>End-effector</th><th>Scale</th>
 </tr></thead><tbody id="gv-tb"></tbody></table>
 <div class="nr" id="gv-nr" style="display:none">No datasets match the current filters.</div></div>`;
 R.querySelectorAll("#gv-ft .fb").forEach(b=>{b.addEventListener("click",()=>{const tag=b.dataset.t;if(F.has(tag)){F.delete(tag);b.classList.remove("on")}else{F.add(tag);b.classList.add("on")}render()})});
