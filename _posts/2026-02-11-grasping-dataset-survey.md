@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "3D Object Grasping: Dataset & Benchmark Survey"
+title: "Robotic Grasping Dataset Survey"
 date: 2026-02-11
 description: Interactive survey of datasets for task-oriented and language-conditioned 3D grasp prediction.
-tags: [grasping, dataset, benchmark, 3d-vision, robotics]
+tags: [robotics, grasping, dataset]
 categories: research
 giscus_comments: false
 related_posts: false
@@ -12,39 +12,51 @@ related_posts: false
 <div id="gv-root"></div>
 
 <style>
-#gv-root{--a:#4f46e5;--m:#6b7280;--b:#e5e7eb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6}
+#gv-root{--a:#4f46e5;--m:#6b7280;--b:#e5e7eb;--bg:#fff;--bg2:#f9fafb;--bg3:#fafbfc;--txt:#1a1a2e;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6}
+html[data-theme="dark"] #gv-root{--a:#818cf8;--m:#9ca3af;--b:#374151;--bg:#1f2937;--bg2:#111827;--bg3:#374151;--txt:#e5e7eb}
 #gv-root .st{display:flex;gap:1.5rem;margin-bottom:1.2rem;flex-wrap:wrap}
 #gv-root .sn{font-size:1.4rem;font-weight:700;color:var(--a)}
 #gv-root .sl{font-size:.8rem;color:var(--m)}
-#gv-root .lg{display:flex;flex-wrap:wrap;gap:.55rem;margin-bottom:1.2rem;padding:.6rem .8rem;background:#f9fafb;border-radius:8px;font-size:.75rem;align-items:center}
+#gv-root .lg{display:flex;flex-wrap:wrap;gap:.55rem;margin-bottom:1.2rem;padding:.6rem .8rem;background:var(--bg2);border-radius:8px;font-size:.75rem;align-items:center}
 #gv-root .lt{font-weight:600;color:var(--m);font-size:.68rem;text-transform:uppercase;letter-spacing:.05em}
 #gv-root .ft{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:1.2rem;align-items:center}
 #gv-root .fl{font-size:.72rem;font-weight:600;color:var(--m);text-transform:uppercase;letter-spacing:.05em;margin-right:.1rem}
 #gv-root .fg{display:flex;align-items:center;gap:.2rem}
-#gv-root .fb{padding:.25rem .6rem;border:1px solid var(--b);border-radius:5px;background:#fff;font-size:.78rem;cursor:pointer;transition:all .15s;color:#1a1a2e}
+#gv-root .fb{padding:.25rem .6rem;border:1px solid var(--b);border-radius:5px;background:var(--bg);font-size:.78rem;cursor:pointer;transition:all .15s;color:var(--txt)}
 #gv-root .fb:hover{border-color:var(--a);color:var(--a)}
 #gv-root .fb.on{background:var(--a);color:#fff;border-color:var(--a)}
 #gv-root .dv{width:1px;height:22px;background:var(--b);margin:0 .4rem}
 #gv-root .tg{display:inline-flex;align-items:center;padding:.12rem .45rem;border-radius:4px;font-size:.68rem;font-weight:600;white-space:nowrap}
-#gv-root .t-la{background:#ecfdf5;color:#059669}
-#gv-root .t-nl{background:#fef2f2;color:#dc2626}
-#gv-root .t-gr{background:#eff6ff;color:#2563eb}
-#gv-root .t-dx{background:#f5f3ff;color:#7c3aed}
-#gv-root .t-sv{background:#fffbeb;color:#d97706}
-#gv-root .t-f3{background:#f0fdf4;color:#15803d}
-#gv-root .t-mv{background:#fefce8;color:#a16207}
-#gv-root .t-rl{background:#fdf2f8;color:#be185d}
-#gv-root .t-sm{background:#f0f9ff;color:#0369a1}
-#gv-root .t-2d{background:#faf5ff;color:#7e22ce}
-#gv-root .t-6d{background:#ecfdf5;color:#047857}
+#gv-root .t-la{background:#065f46;color:#a7f3d0}
+#gv-root .t-nl{background:#991b1b;color:#fecaca}
+#gv-root .t-gr{background:#1e40af;color:#bfdbfe}
+#gv-root .t-dx{background:#5b21b6;color:#ddd6fe}
+#gv-root .t-sv{background:#92400e;color:#fde68a}
+#gv-root .t-f3{background:#166534;color:#bbf7d0}
+#gv-root .t-mv{background:#854d0e;color:#fef08a}
+#gv-root .t-rl{background:#9d174d;color:#fbcfe8}
+#gv-root .t-sm{background:#075985;color:#bae6fd}
+#gv-root .t-2d{background:#6b21a8;color:#e9d5ff}
+#gv-root .t-6d{background:#065f46;color:#a7f3d0}
+html:not([data-theme="dark"]) #gv-root .t-la{background:#ecfdf5;color:#059669}
+html:not([data-theme="dark"]) #gv-root .t-nl{background:#fef2f2;color:#dc2626}
+html:not([data-theme="dark"]) #gv-root .t-gr{background:#eff6ff;color:#2563eb}
+html:not([data-theme="dark"]) #gv-root .t-dx{background:#f5f3ff;color:#7c3aed}
+html:not([data-theme="dark"]) #gv-root .t-sv{background:#fffbeb;color:#d97706}
+html:not([data-theme="dark"]) #gv-root .t-f3{background:#f0fdf4;color:#15803d}
+html:not([data-theme="dark"]) #gv-root .t-mv{background:#fefce8;color:#a16207}
+html:not([data-theme="dark"]) #gv-root .t-rl{background:#fdf2f8;color:#be185d}
+html:not([data-theme="dark"]) #gv-root .t-sm{background:#f0f9ff;color:#0369a1}
+html:not([data-theme="dark"]) #gv-root .t-2d{background:#faf5ff;color:#7e22ce}
+html:not([data-theme="dark"]) #gv-root .t-6d{background:#ecfdf5;color:#047857}
 #gv-root .tw{overflow-x:auto;border:1px solid var(--b);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
 #gv-root table{width:100%;border-collapse:collapse;font-size:.82rem}
-#gv-root thead{background:#f9fafb;position:sticky;top:0;z-index:10}
+#gv-root thead{background:var(--bg2);position:sticky;top:0;z-index:10}
 #gv-root th{padding:.65rem .8rem;text-align:left;font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--m);border-bottom:2px solid var(--b);cursor:pointer;user-select:none;white-space:nowrap}
 #gv-root th:hover{color:var(--a)}
-#gv-root td{padding:.55rem .8rem;border-bottom:1px solid var(--b);vertical-align:middle}
+#gv-root td{padding:.55rem .8rem;border-bottom:1px solid var(--b);vertical-align:middle;color:var(--txt)}
 #gv-root tr:last-child td{border-bottom:none}
-#gv-root tr:hover td{background:#fafbfc}
+#gv-root tr:hover td{background:var(--bg3)}
 #gv-root .dn{font-weight:600;color:var(--a)}
 #gv-root .dn a{color:inherit;text-decoration:none}
 #gv-root .dn a:hover{text-decoration:underline}
