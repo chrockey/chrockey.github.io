@@ -87,6 +87,12 @@ const D=[
 {n:"OakInk2",s:"",y:2024,v:"CVPR",u:"",i:"RGB + 3D mesh",tags:["multi","lang","human","real"],ld:"Task desc.+affordance",sc:"Bimanual complex tasks"},
 {n:"DexYCB",s:"",y:2021,v:"CVPR",u:"https://dex-ycb.github.io/",i:"RGB",tags:["multi","human","real"],ld:"",sc:"582K frames, 20 YCB obj"},
 {n:"ARCTIC",s:"",y:2023,v:"CVPR",u:"https://arctic.is.tue.mpg.de/",i:"RGB (8+1 ego)",tags:["multi","human","real"],ld:"",sc:"2.1M frames, 11 obj"},
+{n:"GigaHands",s:"",y:2025,v:"CVPR",u:"https://ivl.cs.brown.edu/research/gigahands.html",i:"RGB (multi-view)",tags:["multi","lang","human","real"],ld:"84K text annotations",sc:"34h, 56 subj, 14K clips"},
+{n:"GRAB",s:"",y:2020,v:"ECCV",u:"https://grab.is.tue.mpg.de/",i:"3D mesh",tags:["full","human","real"],ld:"",sc:"10 subj, 51 obj"},
+{n:"ParaHome",s:"",y:2024,v:"arXiv",u:"https://github.com/snuvclab/ParaHome",i:"RGB + IMU + gloves",tags:["multi","human","real"],ld:"",sc:"486 min, 38 subj"},
+{n:"HUMOTO",s:"",y:2025,v:"ICCV",u:"https://jiaxin-lu.github.io/humoto/",i:"RGB-D + MoCap",tags:["full","human","real"],ld:"",sc:"735 seq, 63 obj"},
+{n:"H2O",s:"",y:2021,v:"ICCV",u:"https://taeinkwon.com/projects/h2o/",i:"RGB-D (multi-view ego)",tags:["multi","lang","human","real"],ld:"Interaction labels",sc:"571K+ frames"},
+{n:"TACO",s:"",y:2024,v:"CVPR",u:"https://taco2024.github.io/",i:"RGB (multi-view + ego)",tags:["multi","lang","human","real"],ld:"Action labels",sc:"2.5K seq, 5.2M frames"},
 ];
 const TAGS={single:"Single-view",multi:"Multi-view",full:"Full 3D",lang:"Language",human:"Human Hand",gripper:"Gripper",dex:"Dexterous",real:"Real",sim:"Synthetic"};
 const TCLS={single:"sv",multi:"mv",full:"f3",lang:"la",human:"hm",gripper:"gr",dex:"dx",real:"rl",sim:"sm"};
