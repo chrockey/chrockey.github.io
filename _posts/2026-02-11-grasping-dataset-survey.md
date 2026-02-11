@@ -27,6 +27,7 @@ html[data-theme="dark"] #gv-root{--a:#818cf8;--m:#9ca3af;--b:#374151;--bg:#1f293
 #gv-root .t-la{background:#065f46;color:#a7f3d0}
 #gv-root .t-gr{background:#1e40af;color:#bfdbfe}
 #gv-root .t-dx{background:#5b21b6;color:#ddd6fe}
+#gv-root .t-hm{background:#7c2d12;color:#fed7aa}
 #gv-root .t-sv{background:#92400e;color:#fde68a}
 #gv-root .t-f3{background:#166534;color:#bbf7d0}
 #gv-root .t-mv{background:#854d0e;color:#fef08a}
@@ -35,6 +36,7 @@ html[data-theme="dark"] #gv-root{--a:#818cf8;--m:#9ca3af;--b:#374151;--bg:#1f293
 html:not([data-theme="dark"]) #gv-root .t-la{background:#ecfdf5;color:#059669}
 html:not([data-theme="dark"]) #gv-root .t-gr{background:#eff6ff;color:#2563eb}
 html:not([data-theme="dark"]) #gv-root .t-dx{background:#f5f3ff;color:#7c3aed}
+html:not([data-theme="dark"]) #gv-root .t-hm{background:#fff7ed;color:#c2410c}
 html:not([data-theme="dark"]) #gv-root .t-sv{background:#fffbeb;color:#d97706}
 html:not([data-theme="dark"]) #gv-root .t-f3{background:#f0fdf4;color:#15803d}
 html:not([data-theme="dark"]) #gv-root .t-mv{background:#fefce8;color:#a16207}
@@ -78,17 +80,15 @@ const D=[
 {n:"MetaGraspNet",s:"",y:2022,v:"ICRA",u:"",i:"RGB-D",tags:["single","gripper","sim"],ld:"",sc:"217K scenes, 82 obj"},
 {n:"DexGraspNet",s:"",y:2023,v:"ICRA",u:"https://pku-epic.github.io/DexGraspNet/",i:"3D mesh",tags:["full","dex","sim"],ld:"",sc:"5,355 obj, 1.32M grasps"},
 {n:"DexGraspNet 2.0",s:"",y:2024,v:"CoRL",u:"https://pku-epic.github.io/DexGraspNet/",i:"3D scene",tags:["full","dex","sim"],ld:"",sc:"8,270 scenes, 427M grasps"},
-{n:"3D AffordanceNet",s:"",y:2021,v:"CVPR",u:"",i:"Point cloud",tags:["full","gripper","sim"],ld:"Affordance categories",sc:"22,949 shapes, 23 cats"},
-{n:"ContactDB",s:"",y:2019,v:"CVPR",u:"https://contactdb.cc.gatech.edu/",i:"3D mesh + thermal",tags:["full","dex","real"],ld:"2 intents: use, handoff",sc:"50 obj, 3,750 grasps"},
-{n:"GAPartNet",s:"",y:2023,v:"CVPR",u:"",i:"Point cloud",tags:["full","gripper","sim"],ld:"9 actionable part classes",sc:"1,166 obj, 8,489 parts"},
-{n:"HOI4D",s:"",y:2022,v:"CVPR",u:"https://hoi4d.github.io/",i:"RGB-D (ego)",tags:["single","dex","real"],ld:"54 interaction tasks",sc:"2.4M frames, 800 obj"},
-{n:"OakInk",s:"",y:2022,v:"CVPR",u:"https://github.com/oakink/OakInk",i:"RGB + 3D mesh",tags:["multi","dex","real"],ld:"4 intents",sc:"1,800 obj, 50K poses"},
-{n:"OakInk2",s:"",y:2024,v:"CVPR",u:"",i:"RGB + 3D mesh",tags:["multi","lang","dex","real"],ld:"Task desc.+affordance",sc:"Bimanual complex tasks"},
-{n:"DexYCB",s:"",y:2021,v:"CVPR",u:"https://dex-ycb.github.io/",i:"RGB",tags:["multi","dex","real"],ld:"",sc:"582K frames, 20 YCB obj"},
-{n:"ARCTIC",s:"",y:2023,v:"CVPR",u:"https://arctic.is.tue.mpg.de/",i:"RGB (8+1 ego)",tags:["multi","dex","real"],ld:"",sc:"2.1M frames, 11 obj"},
+{n:"ContactDB",s:"",y:2019,v:"CVPR",u:"https://contactdb.cc.gatech.edu/",i:"3D mesh + thermal",tags:["full","human","real"],ld:"2 intents: use, handoff",sc:"50 obj, 3,750 grasps"},
+{n:"HOI4D",s:"",y:2022,v:"CVPR",u:"https://hoi4d.github.io/",i:"RGB-D (ego)",tags:["single","human","real"],ld:"54 interaction tasks",sc:"2.4M frames, 800 obj"},
+{n:"OakInk",s:"",y:2022,v:"CVPR",u:"https://github.com/oakink/OakInk",i:"RGB + 3D mesh",tags:["multi","human","real"],ld:"4 intents",sc:"1,800 obj, 50K poses"},
+{n:"OakInk2",s:"",y:2024,v:"CVPR",u:"",i:"RGB + 3D mesh",tags:["multi","lang","human","real"],ld:"Task desc.+affordance",sc:"Bimanual complex tasks"},
+{n:"DexYCB",s:"",y:2021,v:"CVPR",u:"https://dex-ycb.github.io/",i:"RGB",tags:["multi","human","real"],ld:"",sc:"582K frames, 20 YCB obj"},
+{n:"ARCTIC",s:"",y:2023,v:"CVPR",u:"https://arctic.is.tue.mpg.de/",i:"RGB (8+1 ego)",tags:["multi","human","real"],ld:"",sc:"2.1M frames, 11 obj"},
 ];
-const TAGS={single:"Single-view",multi:"Multi-view",full:"Full 3D",lang:"Language",gripper:"Gripper",dex:"Dexterous",real:"Real",sim:"Synthetic"};
-const TCLS={single:"sv",multi:"mv",full:"f3",lang:"la",gripper:"gr",dex:"dx",real:"rl",sim:"sm"};
+const TAGS={single:"Single-view",multi:"Multi-view",full:"Full 3D",lang:"Language",human:"Human Hand",gripper:"Gripper",dex:"Dexterous",real:"Real",sim:"Synthetic"};
+const TCLS={single:"sv",multi:"mv",full:"f3",lang:"la",human:"hm",gripper:"gr",dex:"dx",real:"rl",sim:"sm"};
 let F=new Set(),sK="y",sD=-1;
 function t(c,x){return'<span class="tg t-'+c+'">'+x+"</span>"}
 function mf(e){if(F.size===0)return true;for(let tag of F){if(!e.tags.includes(tag))return false;}return true;}
@@ -115,6 +115,7 @@ R.innerHTML=`
 <button class="fb" data-t="lang">Language</button>
 <button class="fb" data-t="gripper">Gripper</button>
 <button class="fb" data-t="dex">Dexterous</button>
+<button class="fb" data-t="human">Human Hand</button>
 <div class="dv"></div>
 <button class="fb" data-t="single">Single-view</button>
 <button class="fb" data-t="multi">Multi-view</button>
