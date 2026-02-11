@@ -73,7 +73,7 @@ const D=[
 {n:"SemGrasp / CapGrasp",s:"",y:2024,v:"ECCV",u:"https://arxiv.org/abs/2404.03590",i:"3D mesh",tags:["full","lang","dex","sim"],ld:"260K captions (3 levels)",sc:"50K grasps"},
 {n:"DexGYSNet",s:"Grasp as You Say",y:2024,v:"NeurIPS",u:"https://arxiv.org/abs/2405.19291",i:"3D mesh",tags:["full","lang","dex","sim"],ld:"50K grasp-language pairs",sc:"1,800 obj, 50K pairs"},
 {n:"DexTOG-80K",s:"",y:2025,v:"arXiv",u:"https://arxiv.org/abs/2504.04573",i:"3D mesh",tags:["full","lang","dex","sim"],ld:"5 task desc. per obj",sc:"80K grasps, 80 obj"},
-{n:"Grasp-Anything++",s:"",y:2024,v:"CVPR",u:"https://airvlab.github.io/grasp-anything/",i:"RGB",tags:["single","lang","gripper","sim"],ld:"10M+ part-level NL",sc:"1M images, 3M+ obj"},
+{n:"Grasp-Anything++",s:"",y:2024,v:"CVPR",u:"https://arxiv.org/abs/2406.09489",i:"RGB",tags:["single","lang","gripper","sim"],ld:"10M+ part-level NL",sc:"1M images, 3M+ obj"},
 {n:"OCID-VLG",s:"",y:2023,v:"CoRL",u:"https://github.com/gtziafas/OCID-VLG",i:"RGB-D",tags:["single","lang","gripper","real"],ld:"Referring expressions",sc:"90K tuples, 31 cats"},
 {n:"GraspNet-1Billion",s:"",y:2020,v:"CVPR",u:"https://graspnet.net",i:"RGB-D",tags:["single","gripper","real"],ld:"",sc:"97K imgs, 88 obj, 1B+ grasps"},
 {n:"ACRONYM",s:"",y:2021,v:"ICRA",u:"https://sites.google.com/view/graspdataset",i:"3D mesh",tags:["full","gripper","sim"],ld:"",sc:"8,872 obj, 17.7M grasps"},
