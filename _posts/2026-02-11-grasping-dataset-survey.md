@@ -88,7 +88,6 @@ const D=[
 {n:"DexYCB",s:"",y:2021,v:"CVPR",u:"https://dex-ycb.github.io/",i:"RGB",tags:["multi","human","real"],ld:"",sc:"582K frames, 20 YCB obj"},
 {n:"ARCTIC",s:"",y:2023,v:"CVPR",u:"https://arctic.is.tue.mpg.de/",i:"RGB (8+1 ego)",tags:["multi","human","real"],ld:"",sc:"2.1M frames, 11 obj"},
 {n:"GigaHands",s:"",y:2025,v:"CVPR",u:"https://ivl.cs.brown.edu/research/gigahands.html",i:"RGB (multi-view)",tags:["multi","lang","human","real"],ld:"84K text annotations",sc:"34h, 56 subj, 14K clips"},
-{n:"HUMOTO",s:"",y:2025,v:"ICCV",u:"https://jiaxin-lu.github.io/humoto/",i:"RGB-D + MoCap",tags:["full","human","real"],ld:"",sc:"735 seq, 63 obj"},
 {n:"H2O",s:"",y:2021,v:"ICCV",u:"https://taeinkwon.com/projects/h2o/",i:"RGB-D (multi-view ego)",tags:["multi","lang","human","real"],ld:"Interaction labels",sc:"571K+ frames"},
 {n:"TACO",s:"",y:2024,v:"CVPR",u:"https://taco2024.github.io/",i:"RGB (multi-view + ego)",tags:["multi","lang","human","real"],ld:"Action labels",sc:"2.5K seq, 5.2M frames"},
 ];
