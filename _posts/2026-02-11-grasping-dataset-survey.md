@@ -2,7 +2,7 @@
 layout: post
 title: "Robotic Grasping Dataset Survey"
 date: 2026-02-11
-description: Interactive survey of datasets for task-oriented and language-conditioned 3D grasp prediction.
+description: Interactive survey of datasets for task-oriented 3D grasping.
 tags: [robotics, grasping, dataset]
 categories: research
 giscus_comments: false
