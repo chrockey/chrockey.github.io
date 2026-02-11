@@ -98,7 +98,7 @@ function t(c,x){return'<span class="tg t-'+c+'">'+x+"</span>"}
 function mf(e){for(let tag of FI){if(!e.tags.includes(tag))return false;}for(let tag of FX){if(e.tags.includes(tag))return false;}return true;}
 function rr(e){
 const inputTags=e.tags.filter(tag=>["single","multi","full","lang"].includes(tag)).map(tag=>t(TCLS[tag],TAGS[tag])).join(" ");
-const eeTags=e.tags.filter(tag=>["gripper","dex"].includes(tag)).map(tag=>t(TCLS[tag],TAGS[tag])).join(" ");
+const eeTags=e.tags.filter(tag=>["gripper","dex","human"].includes(tag)).map(tag=>t(TCLS[tag],TAGS[tag])).join(" ");
 const dataTags=e.tags.filter(tag=>["real","sim"].includes(tag)).map(tag=>t(TCLS[tag],TAGS[tag])).join(" ");
 const nh=e.u?'<span class="dn"><a href="'+e.u+'" target="_blank">'+e.n+"</a></span>":'<span class="dn">'+e.n+"</span>";
 const sh=e.s?'<br><span class="vn">'+e.s+"</span>":"";
