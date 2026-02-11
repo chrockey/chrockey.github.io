@@ -117,6 +117,7 @@ R.innerHTML=`
 <div class="ft" id="gv-ft">
 <span class="fl">Filter by tags:</span>
 <button class="fb" data-t="lang">Language</button>
+<div class="dv"></div>
 <button class="fb" data-t="gripper">Gripper</button>
 <button class="fb" data-t="dex">Dexterous</button>
 <button class="fb" data-t="human">Human Hand</button>
