@@ -22,6 +22,7 @@ html[data-theme="dark"] #gv-root{--a:#818cf8;--m:#9ca3af;--b:#374151;--bg:#1f293
 #gv-root .fb{padding:.25rem .6rem;border:1px solid var(--b);border-radius:5px;background:var(--bg);font-size:.78rem;cursor:pointer;transition:all .15s;color:var(--txt)}
 #gv-root .fb:hover{border-color:var(--a);color:var(--a)}
 #gv-root .fb.on{background:var(--a);color:#fff;border-color:var(--a)}
+#gv-root .fb.ex{background:#dc2626;color:#fff;border-color:#dc2626}
 #gv-root .dv{width:1px;height:22px;background:var(--b);margin:0 .4rem}
 #gv-root .tg{display:inline-flex;align-items:center;padding:.12rem .45rem;border-radius:4px;font-size:.68rem;font-weight:600;white-space:nowrap;margin-right:.15rem;margin-bottom:.15rem}
 #gv-root .t-la{background:#065f46;color:#a7f3d0}
@@ -89,9 +90,9 @@ const D=[
 ];
 const TAGS={single:"Single-view",multi:"Multi-view",full:"Full 3D",lang:"Language",human:"Human Hand",gripper:"Gripper",dex:"Dexterous",real:"Real",sim:"Synthetic"};
 const TCLS={single:"sv",multi:"mv",full:"f3",lang:"la",human:"hm",gripper:"gr",dex:"dx",real:"rl",sim:"sm"};
-let F=new Set(),sK="y",sD=-1;
+let FI=new Set(),FX=new Set(),sK="y",sD=-1;
 function t(c,x){return'<span class="tg t-'+c+'">'+x+"</span>"}
-function mf(e){if(F.size===0)return true;for(let tag of F){if(!e.tags.includes(tag))return false;}return true;}
+function mf(e){for(let tag of FI){if(!e.tags.includes(tag))return false;}for(let tag of FX){if(e.tags.includes(tag))return false;}return true;}
 function rr(e){
 const inputTags=e.tags.filter(tag=>["single","multi","full","lang"].includes(tag)).map(tag=>t(TCLS[tag],TAGS[tag])).join(" ");
 const eeTags=e.tags.filter(tag=>["gripper","dex"].includes(tag)).map(tag=>t(TCLS[tag],TAGS[tag])).join(" ");
@@ -128,7 +129,7 @@ R.innerHTML=`
 <th data-s="n">Dataset</th><th data-s="y">Year ▼</th><th>Venue</th><th>Input</th><th>End-effector</th><th>Scale</th><th>Data</th>
 </tr></thead><tbody id="gv-tb"></tbody></table>
 <div class="nr" id="gv-nr" style="display:none">No datasets match the current filters.</div></div>`;
-R.querySelectorAll("#gv-ft .fb").forEach(b=>{b.addEventListener("click",()=>{const tag=b.dataset.t;if(F.has(tag)){F.delete(tag);b.classList.remove("on")}else{F.add(tag);b.classList.add("on")}render()})});
+R.querySelectorAll("#gv-ft .fb").forEach(b=>{b.addEventListener("click",()=>{const tag=b.dataset.t;if(FI.has(tag)){FI.delete(tag);b.classList.remove("on");FX.add(tag);b.classList.add("ex")}else if(FX.has(tag)){FX.delete(tag);b.classList.remove("ex")}else{FI.add(tag);b.classList.add("on")}render()})});
 R.querySelectorAll("th[data-s]").forEach(th=>{th.addEventListener("click",()=>{const k=th.dataset.s;if(sK===k)sD*=-1;else{sK=k;sD=k==="y"?-1:1}R.querySelectorAll("th").forEach(h=>h.textContent=h.textContent.replace(/ [▲▼]/,""));th.textContent+=sD===1?" ▲":" ▼";render()})});
 render()});
 </script>
