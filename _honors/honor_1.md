@@ -3,6 +3,7 @@ layout: post
 inline: true
 ---
 
+- **Best Paper Award (Bronze Prize)**, IPIU, 2026.
 - **POSTECHIAN Fellowship**, POSTECH, 2025
 - **BK21 Best Paper Award (Grand Prize)**, POSTECH GSAI, 2023
 - **Qualcomm Innovation Fellowship Winner**, Qualcomm Korea Corp., 2022

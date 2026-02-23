@@ -2,8 +2,35 @@
 ---
 
 @string{cvpr = {{IEEE/CVF} Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>),}}
+@string{iccv = {{IEEE/CVF} International Conference on Computer Vision (<b>ICCV</b>),}}
 @string{eccv = {European Conference on Computer Vision (<b>ECCV</b>),}}
 @string{icml = {International Conference on Machine Learning (<b>ICML</b>),}}
+
+@inproceedings{park2026affostruction,
+  title={Affostruction: 3D Affordance Grounding with Generative Reconstruction},
+  author={Chunghyun Park and Seunghyeon Lee and Minsu Cho},
+  abstract={This paper addresses the problem of affordance grounding from RGBD images of an object, which aims to localize surface regions corresponding to a text query that describes an action on the object. While existing methods predict affordance regions only on visible surfaces, we propose Affostruction, a generative framework that reconstructs complete geometry from partial observations and grounds affordances on the full shape including unobserved regions. We make three core contributions: generative multi-view reconstruction via sparse voxel fusion that extrapolates unseen geometry while maintaining constant token complexity, flow-based affordance grounding that captures inherent ambiguity in affordance distributions, and affordance-driven active view selection that leverages predicted affordances for intelligent viewpoint sampling. Affostruction achieves 19.1 aIoU on affordance grounding (40.4\% improvement) and 32.67 IoU for 3D reconstruction (67.7\% improvement), enabling accurate affordance prediction on complete shapes.},
+  booktitle=cvpr,
+  year={2026},
+  abbr={CVPR},
+  arxiv={2601.09211},
+  selected={true},
+  website={https://chrockey.github.io/Affostruction/},
+  img_path={assets/img/park2026affostruction.png},
+}
+
+@inproceedings{lee2025combinative,
+  title={Combinative Matching for Geometric Shape Assembly},
+  author={Nahyuk Lee* and Juhong Min* and Junhong Lee and Chunghyun Park and Minsu Cho},
+  abstract={This paper introduces a new shape-matching methodology, combinative matching, to combine interlocking parts for geometric shape assembly. Previous methods for geometric assembly typically rely on aligning parts by finding identical surfaces between the parts as in conventional shape matching and registration. In contrast, we explicitly model two distinct properties of interlocking shapes: 'identical surface shape' and 'opposite volume occupancy.' Our method thus learns to establish correspondences across regions where their surface shapes appear identical but their volumes occupy the inverted space to each other. To facilitate this process, we also learn to align regions in rotation by estimating their shape orientations via equivariant neural networks. The proposed approach significantly reduces local ambiguities in matching and allows a robust combination of parts in assembly. Experimental results on geometric assembly benchmarks demonstrate the efficacy of our method, consistently outperforming the state of the art.},
+  booktitle=iccv,
+  year={2025},
+  abbr={CVPR},
+  arxiv={2508.09780},
+  selected={false},
+  website={https://nahyuklee.github.io/cmnet/},
+  img_path={assets/img/lee2025combinative.png},
+}
 
 @inproceedings{lee2025mosaic3d,
   title={Mosaic3D: Foundation Dataset and Model for Open-Vocabulary 3D Segmentation},
