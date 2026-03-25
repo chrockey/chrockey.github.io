@@ -1,0 +1,21 @@
+#!/bin/sh
+# Pre-commit hook: compile CV PDF if cv/ or publications data changed
+
+# Check if any cv-related files are staged
+if git diff --cached --name-only | grep -qE '^(cv/|data/publications\.json)'; then
+    echo "CV sources changed, recompiling PDF..."
+
+    # Generate publications.tex from JSON
+    python3 cv/generate_pubs.py
+
+    # Compile LaTeX (run twice for references)
+    cd cv
+    pdflatex -interaction=nonstopmode cv.tex > /dev/null 2>&1
+    cd ..
+
+    # Copy to pdf/ and stage
+    cp cv/cv.pdf pdf/cv.pdf
+    git add pdf/cv.pdf
+
+    echo "CV PDF compiled and staged."
+fi
