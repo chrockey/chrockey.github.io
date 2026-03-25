@@ -1,0 +1,40 @@
+name: Compile CV
+
+on:
+  push:
+    paths:
+      - 'cv/**'
+      - 'data/publications.json'
+    branches:
+      - master
+      - main
+      - redesign
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate publications.tex from JSON
+        run: python3 cv/generate_pubs.py
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv.tex
+          working_directory: cv
+
+      - name: Move compiled PDF
+        run: cp cv/cv.pdf pdf/cv.pdf
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add pdf/cv.pdf
+          git diff --staged --quiet || git commit -m "Auto-compile CV PDF from LaTeX source"
+          git push

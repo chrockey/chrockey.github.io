@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Colors
+\definecolor{accent}{HTML}{2563eb}
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{14pt}{6pt}
+
+% List spacing
+\setlist[itemize]{nosep, left=0pt}
+
+% Remove page numbers header
+\pagestyle{plain}
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\LARGE\bfseries Chunghyun Park} \\[6pt]
+  Postdoctoral Researcher, POSTECH AI Institute \\[4pt]
+  \href{mailto:p0125ch@postech.ac.kr}{p0125ch@postech.ac.kr}
+  \quad$\vert$\quad
+  \href{https://chrockey.github.io}{chrockey.github.io}
+  \quad$\vert$\quad
+  \href{https://github.com/chrockey}{GitHub}
+  \quad$\vert$\quad
+  \href{https://scholar.google.com/citations?user=5ABvjQcAAAAJ}{Google Scholar}
+\end{center}
+
+\section{Research Interests}
+Machine learning and computer vision including 3D scene understanding, reconstruction, and perception on point clouds for applications in AR/VR and robotics.
+
+\section{Education}
+\textbf{Ph.D. in Artificial Intelligence} \hfill Feb 2026 \\
+Pohang University of Science and Technology (POSTECH) \\
+Advisor: Prof.\ Minsu Cho, Computer Vision Lab
+
+\textbf{M.S. in Artificial Intelligence} \hfill \\
+Pohang University of Science and Technology (POSTECH)
+
+\textbf{B.S. in Mechanical Engineering} \hfill Feb 2019 \\
+Pohang University of Science and Technology (POSTECH)
+
+\section{Publications}
+
+\input{publications}
+
+\section{Awards \& Honors}
+% Add/update your awards here
+\begin{itemize}
+  \item POSTECHIAN Fellowship (Innovation)
+  \item Outstanding Reviewer, CVPR 2024
+  \item Grand Prize, BK21 Best Paper Award, POSTECH GSAI
+  \item Qualcomm Innovation Fellowship 2022 Winner
+  \item Silver Prize, 28th Samsung HumanTech Paper Award
+\end{itemize}
+
+\section{Professional Services}
+% Add your reviewing/service activities here
+\begin{itemize}
+  \item Reviewer: CVPR, ICCV, ECCV, NeurIPS, ICML
+\end{itemize}
+
+\end{document}
