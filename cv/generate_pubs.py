@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Generate publications.tex from data/publications.json."""
+"""Generate publications.tex from data/publications.json.
+
+Output format: longtable rows for use inside a SectionTable environment.
+Each publication becomes a row with year in the left column and
+title/authors/venue in the right column.
+"""
 
 import json
 import os
@@ -27,10 +32,11 @@ def escape(text):
 
 
 def render_pub(pub):
-    lines = []
+    """Render a single publication as a longtable row."""
+    parts = []
 
     # Title
-    lines.append(rf"\textbf{{{escape(pub['title'])}}}" + r" \\")
+    parts.append(rf"\textbf{{{escape(pub['title'])}}}")
 
     # Authors
     equal = set(pub.get("equal", []))
@@ -45,18 +51,23 @@ def render_pub(pub):
     author_str = ", ".join(authors)
     if pub.get("etAl"):
         author_str += ", et al."
-    lines.append(author_str + r" \\")
+    parts.append(author_str)
 
-    # Venue
+    # Venue and year
     venue = VENUES.get(pub["venue"], pub["venue"])
-    lines.append(rf"\emph{{{escape(venue)}}}, {pub['year']}")
+    venue_line = rf"\textit{{{escape(venue)}}}"
 
-    # Awards
-    for award in pub.get("awards", []):
-        lines.append(r"\\")
-        lines.append(rf"\textcolor{{red}}{{\textbf{{{escape(award)}}}}}")
+    # Distinction only (Oral, Highlight, etc.) for CV
+    for d in pub.get("distinction", []):
+        venue_line += rf" \textit{{{escape(d)}}}"
 
-    return "\n".join(lines)
+    parts.append(venue_line)
+
+    # Join with \newline for the right column content
+    right_col = " \\newline\n".join(parts)
+
+    # Build the full row: year & content \\
+    return f"{pub['year']} & {right_col} \\\\"
 
 
 def main():
@@ -66,8 +77,8 @@ def main():
     with open(json_path) as f:
         pubs = json.load(f)
 
-    blocks = [render_pub(pub) for pub in pubs]
-    output = "\n\n\\bigskip\n\n".join(blocks) + "\n"
+    rows = [render_pub(pub) for pub in pubs]
+    output = "\n\n".join(rows) + "\n"
 
     out_path = os.path.join(script_dir, "publications.tex")
     with open(out_path, "w") as f:

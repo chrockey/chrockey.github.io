@@ -9,3 +9,9 @@ _site
 Gemfile.lock
 vendor
 cv/publications.tex
+cv/*.aux
+cv/*.fdb_latexmk
+cv/*.fls
+cv/*.log
+cv/*.out
+cv/*.pdf
