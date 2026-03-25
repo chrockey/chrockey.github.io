@@ -35,7 +35,8 @@ function renderAuthors(authors, equal, coauthors, etAl) {
 
 function renderPub(pub, coauthors) {
   const img = pub.image ? `<div class="pub-img"><img src="/img/${pub.image}" alt="${pub.title}"></div>` : '';
-  const awards = [...(pub.distinction || []), ...(pub.awards || [])].map(a => `<div class="pub-award">${a}</div>`).join('');
+  const distinction = (pub.distinction || []).length > 0 ? ` (${pub.distinction.join(', ')})` : '';
+  const awards = (pub.awards || []).map(a => `<div class="pub-award">${a}</div>`).join('');
   const links = Object.entries(pub.links || {});
   const hasAbs = pub.abstract && pub.abstract.length > 0;
   const absLink = hasAbs ? `<a href="#" onclick="this.parentElement.nextElementSibling.classList.toggle('open');return false">Abstract</a>` : '';
@@ -47,7 +48,7 @@ function renderPub(pub, coauthors) {
   <div class="pub-info">
     <div class="pub-title">${pub.title}</div>
     <div class="pub-authors">${renderAuthors(pub.authors, pub.equal || [], coauthors, pub.etAl)}</div>
-    <div class="pub-venue"><em>${pub.venue}</em>, ${pub.year}</div>
+    <div class="pub-venue"><em>${pub.venue}</em>, ${pub.year}${distinction}</div>
     ${awards}
     <div class="pub-links">${absLink}${otherLinks}</div>
     ${absDiv}
