@@ -44,19 +44,23 @@
 % Define settings for left-hand column in which dates are printed
 \newcolumntype{R}{>{\raggedleft}p{1in}}
 
+% Reduce vertical space before/after each longtable (controls inter-section gap)
+\setlength{\LTpre}{6pt}
+\setlength{\LTpost}{6pt}
+
 % Define 'SectionTable' environment
 \newenvironment{SectionTable}[1]{
-	\renewcommand*{\arraystretch}{1.7}
+	\renewcommand*{\arraystretch}{1.2}
 	\setlength{\tabcolsep}{10pt}
-	\begin{longtable}{Rp{5.2in}} & #1 \\}
-{\end{longtable}\vspace{-.3cm}}
+	\begin{longtable}{Rp{5.2in}} & #1 \\*[0.3em]}
+{\end{longtable}}
 
 % Define 'SectionTableSingleSpace' environment
 \newenvironment{SectionTableSingleSpace}[1]{
 	\renewcommand*{\arraystretch}{1.2}
 	\setlength{\tabcolsep}{10pt}
-	\begin{longtable}{Rp{5.2in}} & #1 \\[0.6em]}
-{\end{longtable}\vspace{-.3cm}}
+	\begin{longtable}{Rp{5.2in}} & #1 \\*[0.3em]}
+{\end{longtable}}
 
 % --- Document starts here ---
 
@@ -104,12 +108,17 @@ Advisor: Prof.\ Jaesik Park \\
 B.S. in Mechanical Engineering \\
 \end{SectionTable}
 
-% --- Section: Industry experience ---
+% --- Section: Experience ---
 
-\begin{SectionTableSingleSpace}{\headingfont Industry experience}
+\begin{SectionTableSingleSpace}{\headingfont Experience}
+\hfill Mar.\ 2026 --\newline\hfill Present &
+\textbf{POSTECH Institute of AI} (Postdoctoral researcher) -- Pohang, Republic of Korea \newline
+Host: Prof.\ Minsu Cho \newline
+Enhancing 3D understanding of VLA models for robotic manipulation. \\
+
 \hfill Dec.\ 2023 --\newline\hfill Feb.\ 2025 &
 \textbf{NVIDIA} (Research intern) -- Taipei, Taiwan (Remote) \newline
-Mentors: Jaesung Choe, Yu-Chiang Frank Wang \newline
+Hosts: Jaesung Choe, Yu-Chiang Frank Wang \newline
 Researched open-vocabulary 3D segmentation with the NVIDIA LPR team (Junha Lee, Chris Choy, Jan Kautz), publishing Mosaic3D at CVPR 2025. \\
 \end{SectionTableSingleSpace}
 
@@ -118,6 +127,15 @@ Researched open-vocabulary 3D segmentation with the NVIDIA LPR team (Junha Lee, 
 \begin{SectionTable}{\headingfont Publications}
 & \textit{* indicates equal contribution.} \\
 \input{publications}
+\end{SectionTable}
+
+% --- Section: Patents ---
+
+\begin{SectionTable}{\headingfont Patents}
+2025 &
+\textbf{Hardware Apparatus and Method for Predicting Structural Characteristic Orientation of Point Cloud of Structural Object} \newline
+Seungwook Kim*, \underline{Chunghyun Park*}, Yoonwoo Jeong, Jaesik Park, Minsu Cho \newline
+\textit{U.S. Patent Application No.\ US 2025/0191218 A1} \\
 \end{SectionTable}
 
 % --- Section: Awards and honors ---
@@ -149,9 +167,13 @@ Silver Prize, Samsung HumanTech Paper Award (Samsung Electronics)\newline
 % --- Section: Talks ---
 
 \begin{SectionTableSingleSpace}{\headingfont Talks}
+Mar.\ 2024 &
+Equivariant Networks for 3D Vision \newline
+\textit{Guest lecture, CSED703J Symmetry and Equivariant Learning} \\
+
 Nov.\ 2023 &
 Stable and Consistent Prediction of 3D Characteristic Orientation \newline
-\textit{Spotlight Presentation, Korea AI Summit} \\
+\textit{Spotlight presentation, Korea AI Summit} \\
 \end{SectionTableSingleSpace}
 
 % --- Section: Professional services ---
