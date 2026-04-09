@@ -18,6 +18,23 @@
     }
   },
   {
+    "id": "lee2025affogato",
+    "title": "Affogato: Learning Open-Vocabulary Affordance Grounding with Automatic Data Generation at Scale",
+    "authors": ["Junha Lee", "Eunha Park", "Chunghyun Park", "Dahyun Kang", "Minsu Cho"],
+    "equal": [0, 1],
+    "venue": "arXiv",
+    "year": 2025,
+    "image": "lee2025affogato.png",
+    "abstract": "Affordance grounding—localizing object regions based on natural language descriptions of interactions—is a critical challenge for enabling intelligent agents to understand and interact with their environments. However, this task remains challenging due to the need for fine-grained part-level localization, the ambiguity arising from multiple valid interaction regions, and the scarcity of large-scale datasets. In this work, we introduce Affogato, a large-scale benchmark comprising 150K instances, annotated with open-vocabulary text descriptions and corresponding 3D affordance heatmaps across a diverse set of objects and interactions. Building on this benchmark, we develop simple yet effective vision-language models that leverage pretrained part-aware vision backbones and a text-conditional heatmap decoder. Our models trained with the Affogato dataset achieve promising performance on the existing 2D and 3D benchmarks, and notably, exhibit effectiveness in open-vocabulary cross-domain generalization. Affogato dataset is shared in public: https://huggingface.co/datasets/project-affogato/affogato",
+    "distinction": [],
+    "awards": [],
+    "selected": false,
+    "links": {
+      "arXiv": "https://arxiv.org/abs/2506.12009",
+      "Website": "https://junha-l.github.io/affogato/"
+    }
+  },
+  {
     "id": "lee2025combinative",
     "title": "Combinative Matching for Geometric Shape Assembly",
     "authors": ["Nahyuk Lee", "Juhong Min", "Junhong Lee", "Chunghyun Park", "Minsu Cho"],
