@@ -11,7 +11,7 @@
 % --- Page layout settings ---
 
 % Set page margins
-\usepackage[left=0.7in, right=0.8in, bottom=.8in, top=0.8in, headsep=0in, footskip=.2in]{geometry}
+\usepackage[left=0.5in, right=0.5in, bottom=.8in, top=0.8in, headsep=0in, footskip=.2in]{geometry}
 
 % Set line spacing
 \renewcommand{\baselinestretch}{1.2}
@@ -42,7 +42,7 @@
 % --- CV section settings ---
 
 % Define settings for left-hand column in which dates are printed
-\newcolumntype{R}{>{\raggedleft}p{1in}}
+\newcolumntype{R}{>{\raggedleft}p{0.85in}}
 
 % Reduce vertical space before/after each longtable (controls inter-section gap)
 \setlength{\LTpre}{6pt}
@@ -52,14 +52,14 @@
 \newenvironment{SectionTable}[1]{
 	\renewcommand*{\arraystretch}{1.2}
 	\setlength{\tabcolsep}{10pt}
-	\begin{longtable}{Rp{5.2in}} & #1 \\*[0.3em]}
+	\begin{longtable}{Rp{5.75in}} & #1 \\*[0.3em]}
 {\end{longtable}}
 
 % Define 'SectionTableSingleSpace' environment
 \newenvironment{SectionTableSingleSpace}[1]{
 	\renewcommand*{\arraystretch}{1.2}
 	\setlength{\tabcolsep}{10pt}
-	\begin{longtable}{Rp{5.2in}} & #1 \\*[0.3em]}
+	\begin{longtable}{Rp{5.75in}} & #1 \\*[0.3em]}
 {\end{longtable}}
 
 % --- Document starts here ---
