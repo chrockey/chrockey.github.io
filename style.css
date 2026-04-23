@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/cmu-sans-serif');
+@import url('https://fonts.cdnfonts.com/css/linux-libertine');
 
 :root {
   --text: #e0e0e0;
@@ -24,7 +24,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
-  font-family: 'CMU Sans Serif', sans-serif;
+  font-family: 'Linux Libertine', 'Libertinus Serif', Georgia, serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
