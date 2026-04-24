@@ -1,5 +1,22 @@
 [
   {
+    "id": "choy2026spaceformer",
+    "title": "SpaCeFormer: Fast Proposal-Free Open-Vocabulary 3D Instance Segmentation",
+    "authors": ["Chris Choy", "Junha Lee", "Chunghyun Park", "Minsu Cho", "Jan Kautz"],
+    "equal": [],
+    "venue": "arXiv",
+    "year": 2026,
+    "image": "choy2026spaceformer.jpg",
+    "abstract": "Open-vocabulary 3D instance segmentation is a core capability for robotics and AR/VR, but prior methods trade one bottleneck for another: multi-stage 2D+3D pipelines aggregate foundation-model outputs at hundreds of seconds per scene, while pseudo-labeled end-to-end approaches rely on fragmented masks and external region proposals. We present SpaCeFormer, a proposal-free space-curve transformer that runs at 0.14 seconds per scene, 2-3 orders of magnitude faster than multi-stage 2D+3D pipelines. We pair it with SpaCeFormer-3M, the largest open-vocabulary 3D instance segmentation dataset (3.0M multi-view-consistent captions over 604K instances from 7.4K scenes) built through multi-view mask clustering and multi-view VLM captioning; it reaches 21x higher mask recall than prior single-view pipelines (54.3% vs 2.5% at IoU > 0.5). SpaCeFormer combines spatial window attention with Morton-curve serialization for spatially coherent features, and uses a RoPE-enhanced decoder to predict instance masks directly from learned queries without external proposals. On ScanNet200 we achieve 11.1 zero-shot mAP, a 2.8x improvement over the prior best proposal-free method; on ScanNet++ and Replica, we reach 22.9 and 24.1 mAP, surpassing all prior methods including those using multi-view 2D inputs.",
+    "distinction": [],
+    "awards": [],
+    "selected": true,
+    "links": {
+      "arXiv": "https://arxiv.org/abs/2604.20395",
+      "Website": "https://nvlabs.github.io/SpaCeFormer/"
+    }
+  },
+  {
     "id": "park2026affostruction",
     "title": "Affostruction: 3D Affordance Grounding with Generative Reconstruction",
     "authors": ["Chunghyun Park", "Seunghyeon Lee", "Minsu Cho"],
