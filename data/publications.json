@@ -117,7 +117,8 @@
     "awards": [],
     "selected": true,
     "links": {
-      "arXiv": "https://arxiv.org/abs/2306.11406"
+      "arXiv": "https://arxiv.org/abs/2306.11406",
+      "Code": "https://github.com/POSTECH-CVLab/CHOIR"
     }
   },
   {
