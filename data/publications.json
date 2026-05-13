@@ -24,7 +24,7 @@
     "equal": [],
     "venue": "CVPR",
     "year": 2026,
-    "image": "park2026affostruction.png",
+    "image": "park2026affostruction.gif",
     "abstract": "This paper addresses the problem of affordance grounding from RGBD images of an object, which aims to localize surface regions corresponding to a text query that describes an action on the object. While existing methods predict affordance regions only on visible surfaces, we propose Affostruction, a generative framework that reconstructs complete object geometry from partial RGBD observations and grounds affordances on the full shape including unobserved regions. Our approach introduces sparse voxel fusion of multi-view features for constant-complexity generative reconstruction, a flow-based formulation that captures the inherent ambiguity of affordance distributions, and an active view selection strategy guided by predicted affordances. Affostruction outperforms existing methods by large margins on challenging benchmarks, achieving 19.1 aIoU on affordance grounding and 32.67 IoU for 3D reconstruction.",
     "distinction": [],
     "awards": [],

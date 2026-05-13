@@ -34,7 +34,8 @@ function renderAuthors(authors, equal, coauthors, etAl) {
 }
 
 function renderPub(pub, coauthors) {
-  const img = pub.image ? `<div class="pub-img"><img src="/img/${pub.image}" alt="${pub.title}"></div>` : '';
+  const imgDir = pub.image && pub.image.endsWith('.gif') ? 'gif' : 'img';
+  const img = pub.image ? `<div class="pub-img"><img src="/${imgDir}/${pub.image}" alt="${pub.title}"></div>` : '';
   const distinction = (pub.distinction || []).length > 0 ? ` (${pub.distinction.join(', ')})` : '';
   const awards = (pub.awards || []).map(a => `<div class="pub-award">${a}</div>`).join('');
   const links = Object.entries(pub.links || {});
