@@ -5,11 +5,18 @@ on:
     branches:
       - master
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+# Keep only the newest deployment. Cancelling in progress lets a new push clear
+# a run left stuck by a GitHub Actions/Pages outage instead of queueing behind it.
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   deploy:
