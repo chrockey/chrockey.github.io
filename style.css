@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cmu-sans-serif');
 
 :root {
   --text: #e0e0e0;
@@ -24,7 +24,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
-  font-family: 'Libre Franklin', 'Franklin Gothic Book', 'Franklin Gothic Medium', sans-serif;
+  font-family: 'CMU Sans Serif', sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
