@@ -10,7 +10,7 @@
     "abstract": "Affordance grounding—localizing object regions based on natural language descriptions of interactions—is a critical challenge for enabling intelligent agents to understand and interact with their environments. However, this task remains challenging due to the need for fine-grained part-level localization, the ambiguity arising from multiple valid interaction regions, and the scarcity of large-scale datasets. In this work, we introduce Affogato, a large-scale benchmark comprising 150K instances, annotated with open-vocabulary text descriptions and corresponding 3D affordance heatmaps across a diverse set of objects and interactions. Building on this benchmark, we develop simple yet effective vision-language models that leverage pretrained part-aware vision backbones and a text-conditional heatmap decoder. Our models trained with the Affogato dataset achieve promising performance on the existing 2D and 3D benchmarks, and notably, exhibit effectiveness in open-vocabulary cross-domain generalization. Affogato dataset is shared in public: https://huggingface.co/datasets/project-affogato/affogato",
     "distinction": [],
     "awards": [],
-    "selected": true,
+    "selected": false,
     "links": {
       "arXiv": "https://arxiv.org/abs/2506.12009",
       "Website": "https://junha-l.github.io/affogato/"
@@ -27,7 +27,7 @@
     "abstract": "Open-vocabulary 3D instance segmentation is a core capability for robotics and AR/VR, but prior methods trade one bottleneck for another: multi-stage 2D+3D pipelines aggregate foundation-model outputs at hundreds of seconds per scene, while pseudo-labeled end-to-end approaches rely on fragmented masks and external region proposals. We present SpaCeFormer, a proposal-free space-curve transformer that runs at 0.14 seconds per scene, 2-3 orders of magnitude faster than multi-stage 2D+3D pipelines. We pair it with SpaCeFormer-3M, the largest open-vocabulary 3D instance segmentation dataset (3.0M multi-view-consistent captions over 604K instances from 7.4K scenes) built through multi-view mask clustering and multi-view VLM captioning; it reaches 21x higher mask recall than prior single-view pipelines (54.3% vs 2.5% at IoU > 0.5). SpaCeFormer combines spatial window attention with Morton-curve serialization for spatially coherent features, and uses a RoPE-enhanced decoder to predict instance masks directly from learned queries without external proposals. On ScanNet200 we achieve 11.1 zero-shot mAP, a 2.8x improvement over the prior best proposal-free method; on ScanNet++ and Replica, we reach 22.9 and 24.1 mAP, surpassing all prior methods including those using multi-view 2D inputs.",
     "distinction": [],
     "awards": [],
-    "selected": true,
+    "selected": false,
     "links": {
       "arXiv": "https://arxiv.org/abs/2604.20395",
       "Code": "https://github.com/NVlabs/WarpConvNet/blob/main/warpconvnet/models/space_former.py",
