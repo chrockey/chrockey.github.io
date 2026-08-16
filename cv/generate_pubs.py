@@ -31,7 +31,7 @@ def escape(text):
     return text.translate(LATEX_SPECIAL)
 
 
-def render_pub(pub):
+def render_pub(pub, last=False):
     """Render a single publication as a longtable row."""
     parts = []
 
@@ -67,7 +67,10 @@ def render_pub(pub):
     right_col = " \\newline\n".join(parts)
 
     # Build the full row: year & content \\
-    return f"{pub['year']} & {right_col} \\\\"
+    # The last row carries no terminator: \input leaves a trailing token behind
+    # that would open a spurious empty row and widen the gap to the next section.
+    end = "" if last else " \\\\"
+    return f"{pub['year']} & {right_col}{end}"
 
 
 def main():
@@ -77,7 +80,7 @@ def main():
     with open(json_path) as f:
         pubs = json.load(f)
 
-    rows = [render_pub(pub) for pub in pubs]
+    rows = [render_pub(pub, last=(i == len(pubs) - 1)) for i, pub in enumerate(pubs)]
     output = "\n\n".join(rows) + "\n"
 
     out_path = os.path.join(script_dir, "publications.tex")
