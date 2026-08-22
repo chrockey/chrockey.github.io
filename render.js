@@ -57,6 +57,10 @@ function renderPub(pub, coauthors) {
 </div>`;
 }
 
+/* Leading emoji in a news item, so CSS can widen the gap after it.
+   HTML collapses runs of whitespace, so extra spaces in news.json would render as one. */
+const NEWS_EMOJI = /^(\p{Extended_Pictographic}(?:\uFE0F|\u200D\p{Extended_Pictographic})*)/u;
+
 function renderNews(news, container) {
   const VISIBLE = 5;
   const section = document.createElement('section');
@@ -66,7 +70,8 @@ function renderNews(news, container) {
 
   news.forEach((item, i) => {
     const hidden = i >= VISIBLE ? ' news-hidden' : '';
-    section.innerHTML += `<div class="news-item${hidden}"><span class="news-date">${item.date}</span><span>${item.text}</span></div>`;
+    const text = item.text.replace(NEWS_EMOJI, '<span class="news-emoji">$1</span>');
+    section.innerHTML += `<div class="news-item${hidden}"><span class="news-date">${item.date}</span><span>${text}</span></div>`;
   });
 
   if (news.length > VISIBLE) {

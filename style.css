@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/cmu-sans-serif');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
   --text: #e0e0e0;
@@ -24,7 +24,8 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
-  font-family: 'CMU Sans Serif', sans-serif;
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
@@ -69,6 +70,7 @@ h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; border-bottom: 1px solid var(--bor
 /* News */
 .news-item { display: flex; gap: .8rem; padding: .3rem 0; font-size: .9rem; }
 .news-date { color: var(--muted); white-space: nowrap; min-width: 70px; font-size: .85rem; }
+.news-emoji { margin-right: .25em; }
 .news-hidden { display: none; }
 .show-all .news-hidden { display: flex; }
 .toggle { background: none; border: none; color: var(--accent); cursor: pointer; font-size: .85rem; padding: .4rem 0; font-family: inherit; }
