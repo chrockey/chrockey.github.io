@@ -1,5 +1,23 @@
 [
   {
+    "id": "kim2026distributional",
+    "title": "Distributional Estimation of 3D Object Orientation",
+    "authors": [
+      "Minjoon Kim",
+      "Chunghyun Park",
+      "Minsu Cho"
+    ],
+    "equal": [],
+    "venue": "NeurIPS",
+    "year": 2026,
+    "image": "kim2026distributional.png",
+    "abstract": "The canonical orientation of a 3D object is often not unique but inherently ambiguous: many objects admit multiple equally valid canonical frames that no single-output regressor can faithfully represent. Rotational symmetry is the most structured manifestation of this phenomenon, where the set of valid orientations forms an orbit of the symmetry group. Existing methods fall short in one of three ways: they predict only a single orientation, handle symmetry only under predefined group assumptions, or resort to test-time augmentation to approximate the full set of valid orientations. We instead introduce a general framework for ambiguity-aware orientation estimation that is at once SO(3)-equivariant by construction, distributional in its output, and free of any restriction on the symmetry group. It effectively predicts multiple valid orientations as a continuous multimodal distribution over SO(3) via a truncated Wigner-D expansion, without any symmetry-group assumption. The proposed method outperforms recent equivariant regressors and fixed-quotient classifiers on the ShapeNet orientation benchmark, particularly on categories with continuous rotational symmetry, showing that supervision on discrete symmetry labels generalises to continuous bands.",
+    "distinction": [],
+    "awards": [],
+    "selected": true,
+    "links": {}
+  },
+  {
     "id": "lee2025affogato",
     "title": "Affogato: Learning Open-Vocabulary Affordance Grounding with Automatic Data Generation at Scale",
     "authors": ["Junha Lee", "Eunha Park", "Chunghyun Park", "Dahyun Kang", "Minsu Cho"],

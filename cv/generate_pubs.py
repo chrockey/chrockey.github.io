@@ -16,6 +16,7 @@ VENUES = {
     "ICCV": r"IEEE/CVF International Conference on Computer Vision (ICCV)",
     "ECCV": r"European Conference on Computer Vision (ECCV)",
     "ICML": r"International Conference on Machine Learning (ICML)",
+    "NeurIPS": r"Conference on Neural Information Processing Systems (NeurIPS)",
 }
 
 LATEX_SPECIAL = str.maketrans({
