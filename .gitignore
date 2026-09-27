@@ -16,3 +16,4 @@ cv/*.pdf
 *.log
 *.out
 *.synctex.gz
+.claude/
