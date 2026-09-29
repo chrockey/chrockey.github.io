@@ -1,23 +1,5 @@
 const ME = 'Chunghyun Park';
 
-/* Theme toggle */
-function initThemeToggle() {
-  const btn = document.getElementById('theme-toggle');
-  if (!btn) return;
-  const update = () => {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    btn.textContent = isDark ? '\u2600' : '\u263E';
-  };
-  update();
-  btn.addEventListener('click', () => {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    const next = isDark ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    update();
-  });
-}
-
 async function loadJSON(path) {
   const res = await fetch(path);
   return res.json();
@@ -107,7 +89,6 @@ function renderPublications(pubs, coauthors, container) {
 }
 
 async function init() {
-  initThemeToggle();
   const [coauthors, publications, news] = await Promise.all([
     loadJSON('/data/coauthors.json'),
     loadJSON('/data/publications.json'),
