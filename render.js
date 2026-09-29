@@ -73,13 +73,28 @@ function renderNews(news, container) {
   container.appendChild(section);
 }
 
-/* Hover videos play only while the pointer is over their publication. */
+/* Hover media show while the pointer is over a publication. On touch screens,
+   which have no hover, tapping the publication (outside its links) toggles them instead. */
 function initHoverVideos(container) {
+  const noHover = window.matchMedia('(hover: none)').matches;
   container.querySelectorAll('.pub').forEach(el => {
-    const video = el.querySelector('video.pub-hover');
-    if (!video) return;
-    el.addEventListener('mouseenter', () => { video.play().catch(() => {}); });
-    el.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+    const hover = el.querySelector('.pub-hover');
+    if (!hover) return;
+    const video = hover.tagName === 'VIDEO' ? hover : null;
+    const show = () => { el.classList.add('active'); if (video) video.play().catch(() => {}); };
+    const hide = () => {
+      el.classList.remove('active');
+      if (video) { video.pause(); video.currentTime = 0; }
+    };
+    if (noHover) {
+      el.addEventListener('click', e => {
+        if (e.target.closest('a')) return;
+        el.classList.contains('active') ? hide() : show();
+      });
+    } else {
+      el.addEventListener('mouseenter', show);
+      el.addEventListener('mouseleave', hide);
+    }
   });
 }
 

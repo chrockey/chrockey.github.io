@@ -71,7 +71,7 @@ h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; border-bottom: 1px solid var(--bor
   margin: 0 -1rem .6rem; padding: 1rem; border-radius: 14px;
   transition: background-color .2s;
 }
-.pub:hover { background: var(--pub-hover); }
+@media (hover: hover) { .pub:hover { background: var(--pub-hover); } }
 .pub.highlight { background: var(--highlight); }
 .pub-img {
   width: 200px; aspect-ratio: 4 / 3; flex-shrink: 0; position: relative;
@@ -83,7 +83,7 @@ h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; border-bottom: 1px solid var(--bor
 .pub-img { background: #fff; }
 .pub-img { mix-blend-mode: multiply; }
 .pub-img .pub-hover { position: absolute; inset: 0; opacity: 0; transition: opacity .25s; background: #fff; }
-.pub:hover .pub-hover { opacity: 1; }
+.pub.active .pub-hover { opacity: 1; }
 .pub-info { flex: 1; min-width: 0; }
 .pub-title { font-weight: 700; font-size: 1.02rem; line-height: 1.35; letter-spacing: -.005em; margin-bottom: .3rem; }
 .pub-authors { font-size: .86rem; line-height: 1.5; color: var(--muted); margin-bottom: .2rem; }
