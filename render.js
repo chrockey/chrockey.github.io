@@ -77,14 +77,21 @@ function renderNews(news, container) {
    which have no hover, tapping the publication (outside its links) toggles them instead. */
 function initHoverVideos(container) {
   const noHover = window.matchMedia('(hover: none)').matches;
+  let current = null;  // on touch screens only the most recently tapped publication stays active
   container.querySelectorAll('.pub').forEach(el => {
     const hover = el.querySelector('.pub-hover');
     if (!hover) return;
     const video = hover.tagName === 'VIDEO' ? hover : null;
-    const show = () => { el.classList.add('active'); if (video) video.play().catch(() => {}); };
     const hide = () => {
       el.classList.remove('active');
       if (video) { video.pause(); video.currentTime = 0; }
+      if (current && current.el === el) current = null;
+    };
+    const show = () => {
+      if (current && current.el !== el) current.hide();
+      el.classList.add('active');
+      if (video) video.play().catch(() => {});
+      current = { el, hide };
     };
     if (noHover) {
       el.addEventListener('click', e => {
