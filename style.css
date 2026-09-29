@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+/* Satoshi (ITF Free Font License), served by Fontshare rather than committed to this public repo */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,401,501,701&display=swap');
 
 :root {
   /* Palette: coolors.co/bbdef0-00a6a6-efca08-f49f0a-f08700 */
@@ -19,7 +20,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
-  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-family: 'Satoshi', system-ui, -apple-system, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   color: var(--text);
   background: var(--bg);
