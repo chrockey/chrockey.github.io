@@ -5,13 +5,13 @@ function initThemeToggle() {
   const btn = document.getElementById('theme-toggle');
   if (!btn) return;
   const update = () => {
-    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-    btn.textContent = isLight ? '\u263E' : '\u2600';
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    btn.textContent = isDark ? '\u2600' : '\u263E';
   };
   update();
   btn.addEventListener('click', () => {
-    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-    const next = isLight ? 'dark' : 'light';
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
     update();
@@ -35,7 +35,10 @@ function renderAuthors(authors, equal, coauthors, etAl) {
 
 function renderPub(pub, coauthors) {
   const imgDir = pub.image && pub.image.endsWith('.gif') ? 'gif' : 'img';
-  const img = pub.image ? `<div class="pub-img"><img src="/${imgDir}/${pub.image}" alt="${pub.title}"></div>` : '';
+  const hover = !pub.hover ? ''
+    : pub.hover.endsWith('.mp4') ? `<video class="pub-hover" src="${pub.hover}" muted${pub.hoverLoop === false ? '' : ' loop'} playsinline preload="auto"></video>`
+    : `<img class="pub-hover" src="${pub.hover}" alt="" loading="lazy">`;
+  const img = pub.image ? `<div class="pub-img"><img src="/${imgDir}/${pub.image}" alt="${pub.title}">${hover}</div>` : '';
   const distinction = (pub.distinction || []).length > 0 ? ` (${pub.distinction.join(', ')})` : '';
   const awards = (pub.awards || []).map(a => `<div class="pub-award">${a}</div>`).join('');
   const links = Object.entries(pub.links || {});
@@ -44,7 +47,7 @@ function renderPub(pub, coauthors) {
   const otherLinks = links.map(([label, url]) => `<a href="${url}">${label}</a>`).join('');
   const absDiv = hasAbs ? `<div class="pub-abs">${pub.abstract}</div>` : '';
 
-  return `<div class="pub">
+  return `<div class="pub${pub.selected ? ' highlight' : ''}">
   ${img}
   <div class="pub-info">
     <div class="pub-title">${pub.title}</div>
@@ -88,20 +91,19 @@ function renderNews(news, container) {
   container.appendChild(section);
 }
 
-function renderPublications(pubs, coauthors, container, groupByYear) {
-  if (groupByYear) {
-    const years = [...new Set(pubs.map(p => p.year))].sort((a, b) => b - a);
-    for (const year of years) {
-      container.innerHTML += `<h2 class="pub-year">${year}</h2>`;
-      pubs.filter(p => p.year === year).forEach(pub => {
-        container.innerHTML += renderPub(pub, coauthors);
-      });
-    }
-  } else {
-    pubs.forEach(pub => {
-      container.innerHTML += renderPub(pub, coauthors);
-    });
-  }
+/* Hover videos play only while the pointer is over their publication. */
+function initHoverVideos(container) {
+  container.querySelectorAll('.pub').forEach(el => {
+    const video = el.querySelector('video.pub-hover');
+    if (!video) return;
+    el.addEventListener('mouseenter', () => { video.play().catch(() => {}); });
+    el.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+  });
+}
+
+function renderPublications(pubs, coauthors, container) {
+  container.innerHTML = pubs.map(pub => renderPub(pub, coauthors)).join('');
+  initHoverVideos(container);
 }
 
 async function init() {
@@ -115,16 +117,8 @@ async function init() {
   const newsContainer = document.getElementById('news-container');
   if (newsContainer) renderNews(news, newsContainer);
 
-  const selectedContainer = document.getElementById('selected-publications');
-  if (selectedContainer) {
-    const selected = publications.filter(p => p.selected);
-    renderPublications(selected, coauthors, selectedContainer, false);
-  }
-
-  const allContainer = document.getElementById('publications');
-  if (allContainer) {
-    renderPublications(publications, coauthors, allContainer, true);
-  }
+  const pubContainer = document.getElementById('publication-list');
+  if (pubContainer) renderPublications(publications, coauthors, pubContainer);
 }
 
 init();
