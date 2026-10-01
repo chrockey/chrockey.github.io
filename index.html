@@ -8,11 +8,12 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <nav><div class="wrap">
-    <a class="name" href="/"><strong>Chunghyun</strong> Park</a>
-  </div></nav>
-
   <main><div class="wrap">
+
+    <header class="hero">
+      <h1 class="visually-hidden">Chunghyun Park</h1>
+      <canvas id="hero-cloud" aria-hidden="true"></canvas>
+    </header>
 
     <section class="intro">
       <p>Hi! I'm Chunghyun Park (pronounced <em>choong-hyun</em>), a postdoc at <a href="https://piai.postech.ac.kr/">POSTECH Institute of AI</a>, working with <a href="http://cvlab.postech.ac.kr/~mcho/">Minsu Cho</a>, who also advised my PhD. I work on 3D visual perception for systems that act in the physical world, and I'm now extending it to 3D world action models for robot manipulation. I interned at NVIDIA, received the Qualcomm Innovation Fellowship, and was selected for the CVPR 2026 Doctoral Consortium.</p>
@@ -37,5 +38,6 @@
 
   <footer><div class="wrap">&copy; 2026 Chunghyun Park</div></footer>
   <script src="/render.js"></script>
+  <script src="/hero.js"></script>
 </body>
 </html>
