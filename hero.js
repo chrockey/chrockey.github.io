@@ -91,7 +91,7 @@
     const k60 = last ? Math.min(3, (now - last) / 16.7) : 1; last = now;
     const spring = 0.045 * k60, damp = Math.pow(0.82, k60), ease = 1 - Math.pow(0.94, k60);
     // idle sway, overridden by the pointer when it moves
-    if (!pointer.active) { tYaw = Math.sin(t * 0.5) * 0.25; tPitch = Math.sin(t * 0.37) * 0.12; }
+    if (!pointer.active) { tYaw = Math.sin(t * 0.5) * 0.12; tPitch = Math.sin(t * 0.37) * 0.05; }
     yaw += (tYaw - yaw) * ease; pitch += (tPitch - pitch) * ease;
     const cy = Math.cos(yaw), sy = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
     const f = Math.max(W * 1.1, 900);
@@ -138,8 +138,8 @@
     pointer.x = e.clientX - rect.left; pointer.y = e.clientY - rect.top;
     pointer.active = true;
     // the whole window steers the view, so the name follows the pointer from anywhere on the page
-    tYaw = ((e.clientX / window.innerWidth) - 0.5) * 0.7;
-    tPitch = -((e.clientY - (rect.top + rect.height / 2)) / window.innerHeight) * 0.5;
+    tYaw = ((e.clientX / window.innerWidth) - 0.5) * 0.3;
+    tPitch = Math.max(-0.12, Math.min(0.12, -((e.clientY - (rect.top + rect.height / 2)) / window.innerHeight) * 0.2));
   }, { passive: true });
   window.addEventListener('pointerleave', () => { pointer.active = false; pointer.x = pointer.y = -1e4; });
   document.addEventListener('pointerup', e => { if (e.pointerType !== 'mouse') { pointer.x = pointer.y = -1e4; pointer.active = false; } });
