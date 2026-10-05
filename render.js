@@ -5,9 +5,9 @@ async function loadJSON(path) {
   return res.json();
 }
 
-function renderAuthors(authors, equal, coauthors, etAl) {
+function renderAuthors(authors, equal, dagger, coauthors, etAl) {
   return authors.map((name, i) => {
-    const star = equal.includes(i) ? '*' : '';
+    const star = equal.includes(i) ? '*' : dagger.includes(i) ? '†' : '';
     const url = coauthors[name];
     if (name === ME) return `<span class="me">${name}${star}</span>`;
     if (url) return `<a href="${url}">${name}${star}</a>`;
@@ -34,7 +34,7 @@ function renderPub(pub, coauthors) {
   ${img}
   <div class="pub-info">
     <div class="pub-title">${pub.title}</div>
-    <div class="pub-authors">${renderAuthors(pub.authors, pub.equal || [], coauthors, pub.etAl)}</div>
+    <div class="pub-authors">${renderAuthors(pub.authors, pub.equal || [], pub.dagger || [], coauthors, pub.etAl)}</div>
     <div class="pub-venue"><em>${pub.venue}</em>, ${pub.year}${distinction}</div>
     ${honours}
     <div class="pub-links">${absLink}${otherLinks}</div>

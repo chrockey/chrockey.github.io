@@ -41,9 +41,10 @@ def render_pub(pub, last=False):
 
     # Authors
     equal = set(pub.get("equal", []))
+    dagger = set(pub.get("dagger", []))
     authors = []
     for i, name in enumerate(pub["authors"]):
-        star = "*" if i in equal else ""
+        star = "*" if i in equal else r"\textdagger{}" if i in dagger else ""
         escaped = escape(name)
         if name == ME:
             authors.append(rf"\underline{{{escaped}{star}}}")
