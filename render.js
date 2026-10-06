@@ -7,7 +7,8 @@ async function loadJSON(path) {
 
 function renderAuthors(authors, equal, dagger, coauthors, etAl) {
   return authors.map((name, i) => {
-    const star = equal.includes(i) ? '*' : dagger.includes(i) ? '†' : '';
+    const mark = equal.includes(i) ? '*' : dagger.includes(i) ? '†' : '';
+    const star = mark ? `<sup>${mark}</sup>` : '';
     const url = coauthors[name];
     if (name === ME) return `<span class="me">${name}${star}</span>`;
     if (url) return `<a href="${url}">${name}${star}</a>`;
