@@ -19,3 +19,15 @@ if git diff --cached --name-only | grep -qE '^(cv/|data/publications\.json)'; th
 
     echo "CV PDF compiled and staged."
 fi
+
+# Bump the ?v= cache-buster on pages when site scripts or styles change
+# (GitHub Pages lets browsers cache them for 10 minutes)
+if git diff --cached --name-only | grep -qE '^(style\.css|render\.js|hero\.js)$'; then
+    V=$(date -u +%Y%m%d%H%M%S)
+    for page in $(git ls-files '*.html'); do
+        # Skip pages with unstaged edits so they are not swept into the commit
+        git diff --quiet -- "$page" || continue
+        sed -i '' -E "s/\?v=[0-9]+/?v=$V/g" "$page"
+        git add "$page"
+    done
+fi
