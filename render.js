@@ -22,7 +22,7 @@ function renderPub(pub, coauthors) {
     : pub.hover.endsWith('.mp4') ? `<video class="pub-hover" src="${pub.hover}" muted${pub.hoverLoop === false ? '' : ' loop'} playsinline preload="auto"></video>`
     : `<img class="pub-hover" src="${pub.hover}" alt="" loading="lazy">`;
   const img = pub.image ? `<div class="pub-img"><img src="/${imgDir}/${pub.image}" alt="${pub.title}">${hover}</div>` : '';
-  const distinction = (pub.distinction || []).length > 0 ? ` (${pub.distinction.join(', ')})` : '';
+  const distinction = (pub.distinction || []).length > 0 ? ` <strong class="pub-distinction">(${pub.distinction.join(', ')})</strong>` : '';
   // Awards read like jonbarron.info / wenlonghuang.com: one coloured bold line each, no badge
   const honours = (pub.awards || []).map(a => `<div class="pub-award">${a}</div>`).join('');
   const links = Object.entries(pub.links || {});
