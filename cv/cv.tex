@@ -1,220 +1,85 @@
-% --- LaTeX CV Template - Based on S. Venkatraman's Academic CV Template ---
-
-% --- Set document class and font size ---
-
-\documentclass[letterpaper, 11pt]{article}
-
-% --- Package imports ---
-
-\usepackage{hyperref, enumitem, longtable, amsmath, array, textcomp}
-
-% --- Page layout settings ---
-
-% Set page margins
-\usepackage[left=0.5in, right=0.5in, bottom=.8in, top=0.8in, headsep=0in, footskip=.2in]{geometry}
-
-% Set line spacing
-\renewcommand{\baselinestretch}{1.2}
-
-% --- Page formatting settings ---
-
-% Set link colors
-\usepackage[dvipsnames]{xcolor}
-\hypersetup{colorlinks=true, linkcolor=MidnightBlue, urlcolor=MidnightBlue}
-
-% Set font to Libertine, including math support
-\usepackage{libertine}
-\usepackage[libertine]{newtxmath}
-
-% Right-aligned footer with last updated date on every page
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
+% Compact two-page academic CV. Publications are generated from the site data.
+\documentclass[letterpaper,10pt]{article}
+\usepackage[margin=0.6in,footskip=0.25in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype,xcolor,hyperref,tabularx,array,enumitem,fancyhdr}
+\definecolor{Graphite}{HTML}{1D1D1F}
+\definecolor{Muted}{HTML}{626269}
+\definecolor{Accent}{HTML}{5964A0}
+\definecolor{Rule}{HTML}{DDDEE3}
+\color{Graphite}
+\hypersetup{colorlinks=true,urlcolor=Graphite,linkcolor=Graphite,pdftitle={Chunghyun Park - Curriculum Vitae},pdfauthor={Chunghyun Park}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlist[itemize]{leftmargin=12pt,itemsep=1pt,topsep=3pt,parsep=0pt}
+\pagestyle{fancy}\fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\fancyfoot[R]{\footnotesize\color{gray} Last updated: \today}
-
-% Never hyphenate project names
-\hyphenation{Affostruction Affogato SpaCeFormer PointMixer}
-
-% POSTECH Red
-\definecolor{POSTECHRed}{RGB}{166,25,85}
-
-% Define font size and color for section headings
-\newcommand{\headingfont}{\Large\color{POSTECHRed}}
-
-% --- CV section settings ---
-
-% Define settings for left-hand column in which dates are printed
-\newcolumntype{R}{>{\raggedleft}p{0.85in}}
-
-% Reduce vertical space before/after each longtable (controls inter-section gap)
-\setlength{\LTpre}{6pt}
-\setlength{\LTpost}{6pt}
-
-% Define 'SectionTable' environment
-\newenvironment{SectionTable}[1]{
-	\renewcommand*{\arraystretch}{1.2}
-	\setlength{\tabcolsep}{10pt}
-	\begin{longtable}{Rp{5.75in}} & #1 \\*[0.3em]}
-{\end{longtable}}
-
-% Define 'SectionTableSingleSpace' environment
-\newenvironment{SectionTableSingleSpace}[1]{
-	\renewcommand*{\arraystretch}{1.2}
-	\setlength{\tabcolsep}{10pt}
-	\begin{longtable}{Rp{5.75in}} & #1 \\*[0.3em]}
-{\end{longtable}}
-
-% --- Document starts here ---
-
+\fancyfoot[L]{\fontsize{8}{10}\selectfont\color{Muted}Chunghyun Park \quad | \quad Curriculum vitae}
+\fancyfoot[R]{\fontsize{8}{10}\selectfont\color{Muted}Last updated: \today\quad | \quad\thepage}
+\newcommand{\cvsection}[1]{\par\vspace{9pt}{\fontsize{11}{13}\selectfont\bfseries #1}\par\vspace{4pt}{\color{Rule}\hrule}\vspace{6pt}}
+\newcommand{\entry}[3]{\textbf{#1}\hfill{\small\color{Muted}#2}\par #3\par\vspace{5pt}}
+\newcommand{\dated}[2]{\par\hangindent=38pt\hangafter=1\noindent\makebox[38pt][l]{\color{Muted}#1}#2\par\vspace{3pt}}
+\newcommand{\contribmark}[1]{\raisebox{0.45ex}{\color{Muted}\fontsize{8.5}{8.5}\selectfont\bfseries #1}}
+\newcommand{\publication}[4]{\begin{minipage}{\linewidth}\fontsize{9.2}{11.2}\selectfont
+\makebox[27pt][l]{\color{Muted}\textbf{#1}}\parbox[t]{\dimexpr\linewidth-27pt\relax}{\textbf{#2}\par {\color{Muted}#3}\par #4}
+\end{minipage}\par\vspace{6pt}}
 \begin{document}
+{\fontsize{29}{33}\selectfont\bfseries Chunghyun Park}\par\vspace{5pt}
+{\color{Muted}Postdoctoral researcher, POSTECH Institute of AI}\par\vspace{5pt}
+{\small\href{mailto:p0125ch@postech.ac.kr}{p0125ch@postech.ac.kr}\quad\textperiodcentered\quad
+\href{https://chrockey.github.io}{chrockey.github.io}\quad\textperiodcentered\quad
+\href{https://github.com/chrockey}{GitHub}\quad\textperiodcentered\quad
+\href{https://scholar.google.com/citations?user=5ABvjQcAAAAJ}{Google Scholar}}
 
-% --- Name and contact information ---
+\cvsection{Research}
+3D perception and dexterous manipulation. Understanding 3D environments and anticipating the effects of robot actions, with work spanning geometric learning, open-vocabulary and active perception, and world action modeling.
 
-\begin{SectionTable}{\Huge Chunghyun Park} &
-\href{mailto:p0125ch@postech.ac.kr}{p0125ch@postech.ac.kr}
-$\;\boldsymbol{\cdot}\;$
-\href{https://chrockey.github.io}{chrockey.github.io}
-$\;\boldsymbol{\cdot}\;$
-\href{https://github.com/chrockey}{GitHub}
-$\;\boldsymbol{\cdot}\;$
-\href{https://scholar.google.com/citations?user=5ABvjQcAAAAJ}{Google Scholar}
-\newline
-Postdoctoral researcher, POSTECH Institute of AI
-\newline
-Citizenship: Republic of Korea
-\end{SectionTable}
+\cvsection{Experience}
+\entry{POSTECH Institute of AI \textnormal{\,|\, Postdoctoral researcher}}{Mar. 2026 -- Present}{
+3D perception and dexterous manipulation.\par
+{\small\color{Muted}Host: Prof.\ Minsu Cho. Pohang, Republic of Korea. Mandatory military service through Aug. 2027.}}
+\entry{NVIDIA \textnormal{\,|\, Research collaborator}}{Mar. 2025 -- Feb. 2026}{
+Open-vocabulary 3D instance segmentation: SpaCeFormer (ICML 2026).\par
+{\small\color{Muted}Collaborators: Chris Choy and Jan Kautz. Santa Clara, USA (remote).}}
+\entry{NVIDIA \textnormal{\,|\, Research intern}}{Dec. 2023 -- Feb. 2025}{
+Foundation data and models for 3D segmentation: Mosaic3D (CVPR 2025).\par
+{\small\color{Muted}Hosts: Jaesung Choe and Yu-Chiang Frank Wang. Taipei, Taiwan (remote).}}
 
-% --- Section: Research interests ---
+\cvsection{Education}
+\textbf{Pohang University of Science and Technology (POSTECH)}\par\vspace{4pt}
+\entry{Ph.D., Artificial Intelligence \textnormal{\small\color{Muted}\,|\, Advisor: Prof.\ Minsu Cho}}{2022 -- 2026}{
+{\small Thesis: Learning 3D Visual Perception for Geometric and Semantic Generalization.}}
+\entry{M.S., Artificial Intelligence \textnormal{\small\color{Muted}\,|\, Advisor: Prof.\ Jaesik Park}}{2020 -- 2022}{
+{\small Thesis: Fast Point Transformer for Large-scale 3D Scene Understanding.}}
+\textbf{B.S., Mechanical Engineering}\hfill{\small\color{Muted}2014 -- 2019}\par
 
-\begin{SectionTable}{\headingfont Research interests}
-& 3D visual perception for systems that act in the physical world: efficient architectures (Fast Point Transformer, PointMixer), geometric deep learning (CHOIR, RIST, DORE), open-vocabulary perception (Mosaic3D, SpaCeFormer), and active perception (Affostruction), toward 3D world action models for robot manipulation (PointWAM).
-\end{SectionTable}
+\cvsection{Honors}
+\dated{2026}{CVPR Doctoral Consortium (24 selected graduates worldwide)}
+\dated{2026}{Outstanding Presentation Award, KCCV Doctoral Colloquium}
+\dated{2026}{KCCV Doctoral Colloquium (9 selected graduates in South Korea)}
+\dated{2026}{Bronze Prize, IPIU Best Paper Award}
+\dated{2025}{POSTECHIAN Fellowship (Innovation)}
+\dated{2024}{CVPR Outstanding Reviewer (top 2\% of 9,872 reviewers)}
+\dated{2023}{Grand Prize, BK21 Best Paper Award}
+\dated{2022}{Qualcomm Innovation Fellowship}
+\dated{2022}{Silver Prize, Samsung HumanTech Paper Award}
 
-% --- Section: Education ---
+\cvsection{Talks \& service}
+\dated{2026}{\textit{Embodied Vision for Real-World Perception and Action}, KCCV}
+\dated{2026}{\textit{Generalizable 3D Perception for Physical AI}, Chung-Ang University}
+\dated{2024}{\textit{Equivariant Networks for 3D Vision}, POSTECH CSED703J}
+\dated{2023}{\textit{Stable and Consistent Prediction of 3D Characteristic Orientation}, Korea AI Summit}
+\vspace{3pt}\textbf{Reviewer}\quad TPAMI, IJCV; CVPR, ICCV, ECCV, NeurIPS, ICLR.
 
-\begin{SectionTable}{\headingfont Education}
-2022 -- 2026 &
-\textbf{Pohang University of Science and Technology (POSTECH)} \newline
-Ph.D. in Artificial Intelligence \newline
-Thesis: Learning 3D Visual Perception for Geometric and Semantic Generalization \newline
-Advisor: Prof.\ Minsu Cho \\
-
-2020 -- 2022 &
-\textbf{Pohang University of Science and Technology (POSTECH)} \newline
-M.S. in Artificial Intelligence \newline
-Thesis: Fast Point Transformer for Large-scale 3D Scene Understanding \newline
-Advisor: Prof.\ Jaesik Park \\
-
-2014 -- 2019 &
-\textbf{Pohang University of Science and Technology (POSTECH)} \newline
-B.S. in Mechanical Engineering \\
-\end{SectionTable}
-
-% --- Section: Experience ---
-
-\begin{SectionTableSingleSpace}{\headingfont Experience}
-\hfill Mar.\ 2026 --\newline\hfill Present &
-\textbf{POSTECH Institute of AI} (Postdoctoral researcher) -- Pohang, Republic of Korea \newline
-Host: Prof.\ Minsu Cho \newline
-Mandatory military service until August 2027. \newline
-Working on 3D world action models and active perception for robot manipulation. \\
-
-\hfill Mar.\ 2025 --\newline\hfill Feb.\ 2026 &
-\textbf{NVIDIA} (Research collaboration) -- Santa Clara, USA (Remote) \newline
-Collaborators: Chris Choy, Jan Kautz \newline
-Published SpaCeFormer at ICML 2026, extending Mosaic3D to open-vocabulary 3D instance segmentation. \\
-
-\hfill Dec.\ 2023 --\newline\hfill Feb.\ 2025 &
-\textbf{NVIDIA} (Research intern) -- Taipei, Taiwan (Remote) \newline
-Hosts: Jaesung Choe, Yu-Chiang Frank Wang \newline
-Published Mosaic3D at CVPR 2025, a foundation dataset and model for open-vocabulary 3D segmentation. \\
-\end{SectionTableSingleSpace}
-
-% --- Section: Publications ---
-
-\begin{SectionTable}{\headingfont Publications}
-& \textit{\textsuperscript{*,\,\S} equal contribution.} \\
+\newpage
+{\fontsize{18}{22}\selectfont\bfseries Publications}\par\vspace{5pt}
+{\small\color{Muted}\contribmark{\textasteriskcentered}, \contribmark{\textdagger} Equal contribution within each symbol group.}\par\vspace{10pt}
 \input{publications}
-\end{SectionTable}
 
-% --- Section: Patents ---
-
-\begin{SectionTable}{\headingfont Patents}
-2025 &
-\textbf{Hardware Apparatus and Method for Predicting Structural Characteristic Orientation of Point Cloud of Structural Object} \newline
-Seungwook Kim*, \underline{Chunghyun Park*}, Yoonwoo Jeong, Jaesik Park, Minsu Cho \newline
-\textit{U.S. Patent Application No.\ US 2025/0191218 A1} \\
-\end{SectionTable}
-
-% --- Section: Awards and honors ---
-
-\begin{SectionTableSingleSpace}{\headingfont Awards \& honors}
-2026 & Outstanding Presentation Award, Doctoral Colloquium (KCCV) \\
-
-2026 & KCCV Doctoral Colloquium\newline
-\textit{Awarded to 9 selected Ph.D.\ graduates in computer vision across South Korea} \\
-
-2026 & CVPR Doctoral Consortium\newline
-\textit{Awarded to 24 selected Ph.D.\ graduates in computer vision worldwide} \\
-
-2026 & Bronze Prize, Best Paper Award (IPIU) \\
-
-2025 & POSTECHIAN Fellowship -- Innovation (POSTECH)\newline
-\textit{For outstanding graduate students of the semester (\textwon{}6,000,000)} \\
-
-2024 &
-CVPR Outstanding Reviewer\newline
-\textit{Top 2\% of 9,872 reviewers} \\
-
-2023 &
-Grand Prize, BK21 Best Paper Award (POSTECH GSAI) \\
-
-2022 &
-Qualcomm Innovation Fellowship (Qualcomm Korea)\newline
-\textit{Top AI papers by graduate students in South Korea (\textwon{}4,000,000)} \\
-
-2022 &
-Silver Prize, Samsung HumanTech Paper Award (Samsung Electronics)\newline
-\textit{Top papers across 10 fields nationwide (\textwon{}7,000,000)} \\
-\end{SectionTableSingleSpace}
-
-% --- Section: Talks ---
-
-\begin{SectionTableSingleSpace}{\headingfont Talks}
-Aug.\ 2026 &
-Embodied Vision for Real-World Perception and Action \newline
-\textit{Oral presentation, KCCV Doctoral Colloquium} \\
-
-Apr.\ 2026 &
-Generalizable 3D Perception for Physical AI \newline
-\textit{Invited talk, Chung-Ang University} \newline
-Hosts: Prof.\ Jongmin Lee, Prof.\ Sooyoung Lee \\
-
-Mar.\ 2024 &
-Equivariant Networks for 3D Vision \newline
-\textit{Guest lecture, CSED703J Symmetry and Equivariant Learning} \\
-
-Nov.\ 2023 &
-Stable and Consistent Prediction of 3D Characteristic Orientation \newline
-\textit{Spotlight presentation, Korea AI Summit} \\
-\end{SectionTableSingleSpace}
-
-% --- Section: Professional service ---
-
-\begin{SectionTableSingleSpace}{\headingfont Professional service}
-& \textbf{Journal Reviewer}\newline
-IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)\newline
-International Journal of Computer Vision (IJCV) \\
-
-& \textbf{Conference Reviewer}\newline
-IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)\newline
-IEEE/CVF International Conference on Computer Vision (ICCV)\newline
-European Conference on Computer Vision (ECCV)\newline
-Conference on Neural Information Processing Systems (NeurIPS)\newline
-International Conference on Learning Representations (ICLR) \\
-\end{SectionTableSingleSpace}
-
-% --- End of CV! ---
-
+\cvsection{Patent}
+{\small\textbf{Hardware Apparatus and Method for Predicting Structural Characteristic Orientation of Point Cloud of Structural Object}\par
+U.S. Patent Application No. US 2025/0191218 A1, 2025.}
 \end{document}

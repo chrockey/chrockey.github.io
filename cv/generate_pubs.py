@@ -1,23 +1,10 @@
 #!/usr/bin/env python3
-"""Generate publications.tex from data/publications.json.
-
-Output format: longtable rows for use inside a SectionTable environment.
-Each publication becomes a row with year in the left column and
-title/authors/venue in the right column.
-"""
+"""Generate compact publication entries for the two-page LaTeX CV."""
 
 import json
 import os
 
 ME = "Chunghyun Park"
-
-VENUES = {
-    "CVPR": r"IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
-    "ICCV": r"IEEE/CVF International Conference on Computer Vision (ICCV)",
-    "ECCV": r"European Conference on Computer Vision (ECCV)",
-    "ICML": r"International Conference on Machine Learning (ICML)",
-    "NeurIPS": r"Conference on Neural Information Processing Systems (NeurIPS)",
-}
 
 LATEX_SPECIAL = str.maketrans({
     "&": r"\&",
@@ -32,47 +19,35 @@ def escape(text):
     return text.translate(LATEX_SPECIAL)
 
 
-def render_pub(pub, last=False):
-    """Render a single publication as a longtable row."""
-    parts = []
+def publication_category(pub):
+    venue = pub["venue"]
+    if "workshop" in venue.lower():
+        return "W"
+    if venue == "arXiv":
+        return "P"
+    if venue == "Digestive Endoscopy":
+        return "J"
+    if venue in {"CVPR", "ICCV", "ECCV", "ICML", "NeurIPS", "ICLR"}:
+        return "C"
+    raise ValueError(f"Assign a publication category for venue: {venue}")
 
-    # Title
-    parts.append(rf"\textbf{{{escape(pub['title'])}}}")
 
-    # Authors
+def render_pub(pub, label):
+    """Preserve the complete author list and contribution marks in a compact entry."""
     equal = set(pub.get("equal", []))
-    dagger = set(pub.get("dagger", []))
+    second = set(pub.get("dagger", []))
     authors = []
     for i, name in enumerate(pub["authors"]):
-        star = r"\textsuperscript{*}" if i in equal else r"\textsuperscript{\S}" if i in dagger else ""
-        escaped = escape(name)
+        mark = r"\contribmark{\textasteriskcentered}" if i in equal else r"\contribmark{\textdagger}" if i in second else ""
+        author = escape(name) + mark
         if name == ME:
-            authors.append(rf"\underline{{{escaped}{star}}}")
-        else:
-            authors.append(f"{escaped}{star}")
-    author_str = ", ".join(authors)
-    if pub.get("etAl"):
-        author_str += ", et al."
-    parts.append(author_str)
-
-    # Venue and year
-    venue = VENUES.get(pub["venue"], pub["venue"])
-    venue_line = rf"\textit{{{escape(venue)}}}"
-
-    # Distinction only (Oral, Highlight, etc.) for CV
-    for d in pub.get("distinction", []):
-        venue_line += rf" \textit{{{escape(d)}}}"
-
-    parts.append(venue_line)
-
-    # Join with \newline for the right column content
-    right_col = " \\newline\n".join(parts)
-
-    # Build the full row: year & content \\
-    # The last row carries no terminator: \input leaves a trailing token behind
-    # that would open a spurious empty row and widen the gap to the next section.
-    end = "" if last else " \\\\"
-    return f"{pub['year']} & {right_col}{end}"
+            author = rf"\textbf{{{author}}}"
+        authors.append(author)
+    author_text = ", ".join(authors) + (", et al." if pub.get("etAl") else "")
+    venue = f"{escape(pub['venue'])}, {pub['year']}"
+    for distinction in pub.get("distinction", []):
+        venue += f" ({escape(distinction.lower())})"
+    return rf"\publication{{{label}}}{{{escape(pub['title'])}}}{{{author_text}}}{{{venue}}}"
 
 
 def main():
@@ -82,7 +57,14 @@ def main():
     with open(json_path) as f:
         pubs = json.load(f)
 
-    rows = [render_pub(pub, last=(i == len(pubs) - 1)) for i, pub in enumerate(pubs)]
+    counters = dict.fromkeys(("J", "C", "P", "W"), 0)
+    for pub in pubs:
+        counters[publication_category(pub)] += 1
+    rows = []
+    for pub in pubs:
+        category = publication_category(pub)
+        rows.append(render_pub(pub, f"{category}{counters[category]}"))
+        counters[category] -= 1
     output = "\n\n".join(rows) + "\n"
 
     out_path = os.path.join(script_dir, "publications.tex")

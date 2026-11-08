@@ -144,8 +144,8 @@ pre code { background: none; padding: 0; }
 }
 .hl { background: var(--highlight); color: var(--text); padding: .05em .35em; border-radius: 4px; }
 
-/* Homepage — quiet typography and a point-cloud signature. */
-.home {
+/* Shared minimal theme; the homepage retains its point-cloud signature. */
+.home, .cv-page {
   --text: #1d1d1f; --muted: #6e6e73; --accent: #343438;
   --award: #5964a0;
   --bg: #ffffff; --surface: #f5f5f7; --border: #e8e8ed;
@@ -153,7 +153,7 @@ pre code { background: none; padding: 0; }
   --max-w: 920px;
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 }
-.home a:focus-visible, .home button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.home a:focus-visible, .home button:focus-visible, .cv-page a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .home main { padding: 12px 0 36px; }
 .home .hero { position: relative; text-align: center; margin: 0 -20px; padding: 0; }
 .home #hero-cloud { height: 140px; }
@@ -184,7 +184,7 @@ pre code { background: none; padding: 0; }
 .home .pub-links { gap: 6px; margin-top: 10px; }
 .home .pub-links a { font-size: 11px; padding: 5px 12px; background: #fff; border: 1px solid #dedee5; color: var(--text); }
 .home .pub-links a:hover { background: var(--text); color: #fff; border-color: var(--text); }
-.home footer { text-align: left; padding: 18px 0; background: var(--surface); }
+.home footer, .cv-page footer { text-align: left; padding: 18px 0; background: var(--surface); }
 .home footer .wrap { display: flex; justify-content: space-between; gap: 20px; }
 .home footer a { color: var(--muted); }
 @media (max-width: 700px) {
@@ -214,3 +214,22 @@ pre code { background: none; padding: 0; }
 .home .intro a:hover,
 .home .news-item a:hover,
 .home .toggle:hover { color: var(--text); text-decoration-color: currentColor; }
+
+/* CV uses the same palette and type, with a compact document toolbar. */
+.cv-page nav .wrap { padding-top: 16px; padding-bottom: 16px; gap: 20px; }
+.cv-page nav .name { font-family: inherit; font-variant: normal; font-size: 16px; font-weight: 600; letter-spacing: -.025em; }
+.cv-page .cv-back { color: var(--muted); font-size: 13px; }
+.cv-page main { padding: 24px 0 36px; }
+.cv-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px; }
+.cv-header h1 { font-size: 24px; font-weight: 600; letter-spacing: -.035em; margin: 0; }
+.cv-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; font-size: 13px; }
+.cv-actions > a:first-child { text-decoration: underline; text-decoration-color: #b8b8bf; text-underline-offset: 3px; }
+.cv-download { border: 1px solid var(--border); border-radius: 999px; padding: 7px 14px; background: var(--surface); }
+.cv-download:hover { background: var(--text); color: #fff; text-decoration: none; }
+.cv-page .cv-embed { display: block; width: 100%; height: 78vh; min-height: 480px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+.cv-page .cv-embed p { padding: 24px; color: var(--muted); }
+@media (max-width: 600px) {
+  .cv-page main { padding-top: 20px; }
+  .cv-header { align-items: flex-start; flex-direction: column; }
+  .cv-page .cv-embed { min-height: 400px; height: 70vh; }
+}

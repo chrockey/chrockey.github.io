@@ -4,18 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CV | Chunghyun Park</title>
-  <link rel="stylesheet" href="/style.css?v=20261108164545">
+  <link rel="stylesheet" href="/style.css?v=20261108171518">
 </head>
-<body>
-  <nav><div class="wrap">
-    <a class="name" href="/"><strong>Chunghyun</strong> Park</a>
+<body class="cv-page">
+  <nav aria-label="Main navigation"><div class="wrap">
+    <a class="name" href="/">Chunghyun Park</a>
+    <a class="cv-back" href="/">← Home</a>
   </div></nav>
 
   <main><div class="wrap">
-    <embed class="cv-embed" src="/pdf/cv.pdf" type="application/pdf">
+    <header class="cv-header">
+      <h1>Curriculum vitae</h1>
+      <div class="cv-actions">
+        <a href="/pdf/cv.pdf?v=20261108171518" target="_blank" rel="noopener">Open PDF <span aria-hidden="true">↗</span></a>
+        <a class="cv-download" href="/pdf/cv.pdf?v=20261108171518" download>Download PDF <span aria-hidden="true">↓</span></a>
+      </div>
+    </header>
+    <object class="cv-embed" data="/pdf/cv.pdf?v=20261108171518" type="application/pdf" aria-label="Chunghyun Park’s curriculum vitae">
+      <p>Your browser cannot display this PDF. <a href="/pdf/cv.pdf?v=20261108171518">Open the CV</a> to read it.</p>
+    </object>
   </div></main>
 
   <footer><div class="wrap">&copy; 2026 Chunghyun Park</div></footer>
-  <script src="/render.js?v=20261108164545"></script>
 </body>
 </html>
